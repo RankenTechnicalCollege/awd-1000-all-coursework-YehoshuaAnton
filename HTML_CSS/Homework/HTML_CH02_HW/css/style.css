@@ -1,0 +1,9 @@
+body {
+    background-color: navy;
+    color: white;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
