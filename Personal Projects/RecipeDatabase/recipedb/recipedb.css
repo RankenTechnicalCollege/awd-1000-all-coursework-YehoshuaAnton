@@ -1,0 +1,83 @@
+body {
+    display: grid;
+    grid-template: 1fr 10fr 1fr / 1fr 4fr 1fr;
+    margin: auto;
+}
+
+header {
+    grid-area: 1 / 1 / 2 / -1;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+main {
+    grid-area: 2 / 2 / -2 / -2;
+    box-sizing: border-box;
+}
+
+nav {
+    grid-area: 2 / -2 / 3 / -1;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+aside {
+    grid-area: 2 / 1 / -2 / 2;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+
+footer {
+    grid-area: -2 / 1 / -1 / -1;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+a,
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+ul,
+.tree-view {
+    list-style-type: none;
+}
+
+.tree-view {
+    margin: 0;
+    padding: 0;
+}
+
+.caret-down {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret-down::before {
+    content: "\25BC";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.caret-right::before {
+    transform: rotate(270deg);
+}
+
+.active {
+    display: block;
+}
+
+.nested {
+    display: none;
+}

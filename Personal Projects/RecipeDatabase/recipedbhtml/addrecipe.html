@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe Database Layout</title>
+        <link rel="stylesheet" href="../recipedb/recipedb.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Recipe Database</h1>
+        </header>
+        <aside>
+            <ul class="tree-view">
+                <li><span class="caret-down">Milchig | Pareve | Fleishig</span>
+                    <ul class="active">
+                        <li><input type="checkbox" name="milchig" id="milchig"
+                                checked>Milchig</li>
+                        <li><input type="checkbox" name="pareve" id="pareve"
+                                checked>Pareve</li>
+                        <li><input type="checkbox" name="fleishig" id="fleishig"
+                                checked>Fleishig</li>
+                    </ul>
+                </li>
+                <li><span class="caret-down">Categories</span>
+                    <ul class="active-category">
+                        <li><input type="checkbox" name="breads" id="breads"
+                                checked>Breads</li>
+                        <li><input type="checkbox" name="dips" id="dips"
+                                checked>Dips</li>
+                        <li><input class="parent-category" type="checkbox"
+                                name="salads" id="salads" checked>Salads</li>
+                        <ul class="active">
+                            <li><input type="checkbox" name="vegetable"
+                                    id="vegetable" checked>Vegetable</li>
+                            <li><input type="checkbox" name="lettuce"
+                                    id="lettuce" checked>Lettuce</li>
+                            <li><input type="checkbox" name="pasta" id="pasta"
+                                    checked>Pasta</li>
+                        </ul>
+                        <li><input type="checkbox" name="fish" id="fish"
+                                checked>Fish</li>
+                        <li><input type="checkbox" name="soups" id="soups"
+                                checked>Soups</li>
+                        <li><input class="parent-category" type="checkbox"
+                                name="sides" id="sides" checked>Sides</li>
+                        <ul class="active-category">
+                            <li><input type="checkbox" name="potatoes"
+                                    id="potatoes" checked>Potatoes</li>
+                            <li><input type="checkbox" name="rice" id="rice"
+                                    checked>Rice</li>
+                            <li><input type="checkbox" name="kugels" id="kugels"
+                                    checked>Kugels</li>
+                            <li><input type="checkbox" name="vegetables"
+                                    id="vegetables" checked>Vegetables</li>
+                        </ul>
+                        <li><input class="parent-category" type="checkbox"
+                                name="mains" id="mains" checked>Mains</li>
+                        <ul class="active-category">
+                            <li><input type="checkbox" name="chicken"
+                                    id="chicken" checked>Chicken</li>
+                            <li><input type="checkbox" name="meat" id="meat"
+                                    checked>Meat</li>
+                            <li><input type="checkbox" name="dairy" id="dairy"
+                                    checked>Dairy</li>
+                        </ul>
+                        <li><input class="parent-category" type="checkbox"
+                                name="desserts" id="desserts"
+                                checked>Desserts</li>
+                        <ul class="active-category">
+                            <li><input type="checkbox" name="cakes" id="cakes"
+                                    checked>Cakes</li>
+                            <li><input type="checkbox" name="cookies"
+                                    id="cookies" checked>Cookies</li>
+                            <li><input type="checkbox" name="bars" id="bars"
+                                    checked>Bars</li>
+                            <li><input type="checkbox" name="frozen" id="frozen"
+                                    checked>Frozen</li>
+                            <li><input type="checkbox" name="muffins"
+                                    id="muffins" checked>Muffins</li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <input type="button" value="Search">
+        </aside>
+        <main>
+            <h1>Add Recipe</h1>
+            Name: <input type="text" name="name" id="name">
+            From the kitchen of: <input type="text" name="kitchen-of"
+                id="kitchen-of">
+            Category: <select name="mpf" id="mpf">
+                <option value selected hidden>Select One</option>
+                <option value="milchig">Milchig</option>
+                <option value="pareve">Pareve</option>
+                <option value="fleishig">Fleishig</option>
+            </select>
+            <select name="category" id="category">
+                <option value selected hidden>Select One</option>
+                <option value="4">Bread</option>
+                <option value="5">Dip</option>
+                <option value="6">Salad</option>
+                <option value="12">&emsp;Vegetable</option>
+                <option value="13">&emsp;Lettuce</option>
+                <option value="14">&emsp;Pasta</option>
+                <option value="7">Fish</option>
+                <option value="8">Soup</option>
+                <option value="9">Side</option>
+                <option value="15">&emsp;Potatoes</option>
+                <option value="16">&emsp;Rice</option>
+                <option value="17">&emsp;Kugel</option>
+                <option value="18">&emsp;Vegetable</option>
+                <option value="10">Main</option>
+                <option value="19">&emsp;Chicken</option>
+                <option value="20">&emsp;Meat</option>
+                <option value="21">&emsp;Dairy</option>
+                <option value="11">Dessert</option>
+                <option value="22">&emsp;Cake</option>
+                <option value="23">&emsp;Cookie</option>
+                <option value="24">&emsp;Bar</option>
+                <option value="25">&emsp;Frozen</option>
+                <option value="26">&emsp;Muffin</option>
+            </select>
+            Ingredients: <input type="text" name="ingredients" id="ingredients"
+                required>
+            Directions: <textarea name="directions" id="directions" cols="30"
+                rows="10"></textarea>
+            <input type="submit" value="Submit recipe">
+        </main>
+        <nav>
+            <ul class="tree-view">
+                <li><span class="caret-down">Breads</span></li>
+                <li><span class="caret-down">Salads</span></li>
+                <li><span class="caret-down">Soups</span></li>
+                <li><span class="caret-down">Sides</span></li>
+                <li><span class="caret-down">Chicken</span></li>
+                <li><span class="caret-down">Meat</span></li>
+                <li><span class="caret-down">Fish</span>
+                    <ul class="active">
+                        <li><a href="fishandveggies.html">Fish &amp;
+                                Vegetables</a></li>
+                    </ul>
+                </li>
+                <li><span class="caret-down">Desserts</span>
+                    <ul class="active">
+                        <li><a href="">Cheesecake</a></li>
+                        <li><a href="">Muddy Buddies</a></li>
+                        <li><span class="caret-down">Cookies</span>
+                            <ul class="active">
+                                <li><a href="">Gingersnap</a></li>
+                                <li><a href="">Marble</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <footer>
+            <a href="index.html">Home</a>
+            |
+            <a href="addrecipe.html">Add Recipe</a>
+            |
+            <a href="">Update Recipe</a>
+        </footer>
+        <script src="../recipedb/recipedb.js"></script>
+    </body>
+
+</html>

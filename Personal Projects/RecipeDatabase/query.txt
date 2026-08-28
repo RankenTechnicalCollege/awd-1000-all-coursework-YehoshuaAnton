@@ -1,0 +1,155 @@
+SELECT root.category_name AS root_name, down1.category_name AS down1_name 
+FROM categories AS root 
+LEFT OUTER JOIN categories AS down1 
+ON down1.parent_category = root.category_id 
+WHERE root.parent_category IS null 
+ORDER BY root_name, down1_name;
+
+CREATE TABLE IF NOT EXISTS recipes (recipeid int PRIMARY KEY AUTO_INCREMENT, 
+									recipe_name varchar(50), 
+									kitchen_of varchar(50), 
+									category1 int(2), 
+									category2 int(2), 
+									ingredients text, 
+									directions text, 
+									CONSTRAINT FOREIGN KEY(category1) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE, 
+									CONSTRAINT FOREIGN KEY(category2) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE)
+
+add muffins category to desserts
+
+INSERT INTO test (recipe_name, category1, category2) 
+VALUES ('Breadsticks', 2, 4),
+		('Heirloom Tomato Salad', 2, 12), 
+		('Alphabet Soup', 2, 8), 
+		('Pastrami Rice', 3, 16), 
+		('Rivka Chicken', 3, 19), 
+		('Pastrami Pizza', 3, 20), 
+		('Pastrami Salmon', 2, 7), 
+		('Pasta Rosa', 1, 21), 
+		('Chocolate Chip Bars', 2, 24), 
+		('Mrs. Muser Cake', 2, 22), 
+		('Killer Crunch Brownies', 2, 24), 
+		('Toll House Cookies', 2, 11), 
+		('Lasagna', 1, 21), 
+		('Potato Kugel', 2, 17), 
+		('Onion Soup Mix Rice', 2, 16), 
+		('Carrot Kugel', 2, 17), 
+		('Stir-fried Veggies', 2, 18), 
+		('Rice Casserole', 2, 16), 
+		('Pumpkin Craisin Muffins', 2, 9), 
+		('Breaded Cauliflower', 2, 18), 
+		('Newlywed Potatoes', 2, 15), 
+		('Angel Hair Pasta Salad', 2, 14), 
+		('Taco Salad', 2, 13), 
+		('Minestrone Soup', 2, 8), 
+		('Tuna Pot', 1, 21)
+
+SELECT node.category_name AS node_name, up1.category_name AS up1_name 
+FROM categories AS node 
+LEFT OUTER JOIN categories AS up1 
+ON up1.category_id = node.parent_category 
+ORDER BY up1_name, node_name;
+
+SELECT categories.category_name AS category, parent.category_name AS parent 
+FROM categories 
+LEFT OUTER JOIN categories AS parent 
+ON parent.category_id = categories.parent_category 
+WHERE categories.parent_category IS NOT NULL 
+ORDER BY parent.category_id, category;
+
+SELECT node.category_name AS node_name, up2.category_name AS up2_name, test.recipe_name AS recipe_name 
+FROM categories AS node 
+LEFT OUTER JOIN categories AS up1 
+ON up1.category2 = up2.category_name 
+LEFT OUTER JOIN categories AS up2 ON up2.category_id = node.parent_category 
+WHERE node.parent_category IS NOT NULL 
+ORDER BY up2.category_id, node_name;
+
+SELECT test.recipe_name AS name, c.category_name AS category, c.parent_category AS parent
+FROM `test`
+JOIN `categories` c
+ON test.category2 = c.category_id
+JOIN `categories` ca
+ON ca.category_id = c.parent_category
+ORDER BY parent, category, name
+
+SELECT categories.category_name AS category, parent.category_name AS parent
+FROM categories
+LEFT OUTER JOIN categories AS parent
+ON parent.category_id = categories.parent_category
+WHERE categories.parent_category IS NOT NULL
+ORDER BY parent.category_id, category;
+
+SELECT test.recipe_name AS name, category.category_name AS category, parent.category_name AS parent
+FROM test
+LEFT OUTER JOIN categories AS category
+ON category.category_id = test.category2
+LEFT OUTER JOIN categories AS parent
+ON parent.category_id = category.parent_category
+WHERE category.parent_category IS NOT NULL
+ORDER BY parent.category_id, category, name;
+
+SELECT test.recipe_name AS name, category2.category_name AS category2, parent.category_name AS parent
+FROM test
+LEFT OUTER JOIN categories AS category2
+ON category2.category_id = test.category2
+LEFT OUTER JOIN categories AS parent
+ON parent.category_id = category2.parent_category
+ORDER BY parent.category_id, category2.category_id, name;
+
+INSERT INTO users (username, first_name, last_name, email, password, admin) VALUES ("yehoshuaanton", "Yehoshua", "Anton", "yehoshuaanton@gmail.com", SHA2("865nineYA", 256), TRUE);
+
+SELECT recipes.recipe_name AS name, category2.category_name AS category2, parent.category_name AS parent
+FROM recipes
+LEFT OUTER JOIN categories AS category2
+ON category2.category_id = recipes.category2
+LEFT OUTER JOIN categories AS parent
+ON parent.category_id = category2.parent_category
+ORDER BY parent.category_id, category2.category_id, name;
+
+SELECT category_id AS id, category_name AS name
+FROM categories
+WHERE category_id > 3
+ORDER BY parent_category, category_id;
+
+SELECT
+lv1.category_name AS lv1_name,
+lv2.category_name AS lv2_name
+FROM categories AS lv1
+LEFT JOIN categories AS lv2
+ON lv2.parent_category = lv1.category_id;
+
+CREATE TABLE IF NOT EXISTS test_cat (category_id int(2) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                                     category_name varchar(20) NOT NULL,
+                                     parent_category int(2) DEFAULT NULL,
+                                     CONSTRAINT FOREIGN KEY (parent_category) REFERENCES test_cat (category_id))
+									 
+INSERT INTO `test_cat` (`category_id`, `category_name`, `parent_category`) VALUES
+(1, 'Milchig', NULL),
+(2, 'Pareve', NULL),
+(3, 'Fleishig', NULL),
+(4, 'PARENT', NULL),
+(5, 'Breads', 4),
+(6, 'Dips', 4),
+(7, 'Salads', 4),
+(8, 'Fish', 4),
+(9, 'Soups', 4),
+(10, 'Sides', 4),
+(11, 'Mains', 4),
+(12, 'Desserts', 4),
+(13, 'Vegetable', 7),
+(14, 'Lettuce', 7),
+(15, 'Pasta', 7),
+(16, 'Potatoes', 10),
+(17, 'Rice', 10),
+(18, 'Kugels', 10),
+(19, 'Vegetables', 10),
+(20, 'Chicken', 11),
+(21, 'Meat', 11),
+(22, 'Dairy', 11),
+(23, 'Cakes', 12),
+(24, 'Cookies', 12),
+(25, 'Bars', 12),
+(26, 'Frozen', 12),
+(27, 'Muffins', 12);
+

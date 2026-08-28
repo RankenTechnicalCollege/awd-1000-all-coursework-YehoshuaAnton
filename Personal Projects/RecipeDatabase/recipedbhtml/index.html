@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Database Layout</title>
+    <link rel="stylesheet" href="../recipedb/recipedb.css">
+</head>
+
+<body>
+    <header>
+        <h1>Recipe Database</h1>
+    </header>
+    <aside>
+        <ul class="tree-view">
+            <li><span class="caret">Milchig | Pareve | Fleishig</span>
+                <ul class="nested">
+                    <li><input type="checkbox" name="milchig" id="milchig">Milchig</li>
+                    <li><input type="checkbox" name="pareve" id="pareve">Pareve</li>
+                    <li><input type="checkbox" name="fleishig" id="fleishig">Fleishig</li>
+                </ul>
+            </li>
+            <li><span class="caret">Categories</span>
+                <ul class="nested">
+                    <li><input type="checkbox" name="bread" id="bread">Breads</li>
+                    <li><input type="checkbox" name="salad" id="salad">Salads</li>
+                    <li><input type="checkbox" name="soup" id="soup">Soups</li>
+                    <li><input type="checkbox" name="side" id="side">Sides</li>
+                    <li><input type="checkbox" name="chicken" id="chicken">Chicken</li>
+                    <li><input type="checkbox" name="meat" id="meat">Meat</li>
+                    <li><input type="checkbox" name="fish" id="fish">Fish</li>
+                    <li><input type="checkbox" name="dessert" id="dessert">Desserts</li>
+                </ul>
+            </li>
+        </ul>
+        <input type="button" value="Search">
+    </aside>
+    <main></main>
+    <nav>
+        <ul class="tree-view">
+            <li><span class="caret">Breads</span></li>
+            <li><span class="caret">Salads</span></li>
+            <li><span class="caret">Soups</span></li>
+            <li><span class="caret">Sides</span></li>
+            <li><span class="caret">Chicken</span></li>
+            <li><span class="caret">Meat</span></li>
+            <li><span class="caret">Fish</span>
+                <ul class="nested">
+                    <li><a href="fishandveggies.html">Fish &amp; Vegetables</a></li>
+                </ul>
+            </li>
+            <li><span class="caret">Desserts</span>
+                <ul class="nested">
+                    <li><a href="">Cheesecake</a></li>
+                    <li><a href="">Muddy Buddies</a></li>
+                    <li><span class="caret">Cookies</span>
+                        <ul class="nested">
+                            <li><a href="">Gingersnap</a></li>
+                            <li><a href="">Marble</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="addrecipe.html">Add Recipe</a>
+        <a href="">Update Recipe</a>
+    </footer>
+    <script src="../recipedb/recipedb.js"></script>
+</body>
+
+</html>
