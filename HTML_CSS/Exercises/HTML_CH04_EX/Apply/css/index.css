@@ -1,0 +1,115 @@
+/*
+  Student Name: Yehoshua Anton
+  File Name: index.css
+  Date: 08/31/2026
+*/
+
+/* CSS Reset */
+body,
+header,
+nav,
+main,
+footer,
+h1,
+h3,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Style rule for body and image */
+
+body {
+  background-color: #E3EAF8;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Style rule for header content */
+
+header h1 {
+  text-align: center;
+  font-size: 3em;
+  font-family: Georgia, Times, serif;
+  padding: 3%;
+  color: #101A2D;
+}
+
+/* Style rules for navigation area */
+
+nav {
+  background-color: #1D396D;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.5em;
+  font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+}
+
+nav li a {
+  display: block;
+  color: #E3EAF8;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+/* Style rules for main content */
+
+main {
+  padding: 2%;
+  font-family: geneva, arial, sans-serif;
+  overflow: auto;
+}
+
+main p {
+  font-size: 1.25em;
+}
+
+main h3 {
+  padding-top: 2%;
+  font-size: 2em;
+}
+
+#image {
+  width: 45%;
+  float: left;
+  padding: 1%;
+}
+
+#group {
+  width: 45%;
+  float: right;
+}
+
+.external {
+  color: #1D396D;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Style rules for footer content */
+
+footer {
+  text-align: center;
+  font-size: 0.85em;
+  background-color: #1D396D;
+  color: #E3EAF8;
+  padding: 1% 0;
+}
+
+footer a {
+  text-decoration: none;
+}
