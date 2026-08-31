@@ -5,3 +5,7 @@ a {
 a:hover {
     color: red;
 }
+
+iframe {
+    border: 0;
+}
