@@ -1,11 +1,24 @@
-a {
-    text-decoration: none;
-}
+/*
+    Student Name: Yehoshua Anton
+    File Name: index.css
+    Date: 09/01/2026
+*/
 
-a:hover {
-    color: red;
-}
+/* CSS reset */
 
-iframe {
+body,
+header,
+nav,
+main,
+footer {
+    margin: 0;
+    padding: 0;
     border: 0;
+}
+
+/* img */
+
+img {
+    max-width: 100%;
+    display: block;
 }
