@@ -1,0 +1,27 @@
+/* CSS reset */
+
+body,
+header,
+nav,
+main,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+.center-align {
+  text-align: center;
+}

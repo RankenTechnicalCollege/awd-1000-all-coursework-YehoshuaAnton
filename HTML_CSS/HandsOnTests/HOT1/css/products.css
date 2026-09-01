@@ -1,0 +1,12 @@
+ul#products-list {
+  display: flex;
+  list-style: none;
+}
+
+li.product {
+  display: inline;
+}
+
+img.product-image {
+  width: 100%;
+}

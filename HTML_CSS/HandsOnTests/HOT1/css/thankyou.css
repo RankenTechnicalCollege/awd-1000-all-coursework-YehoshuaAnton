@@ -1,0 +1,11 @@
+span#link-lookalike {
+  color: blue;
+}
+
+span#link-lookalike:visited {
+  color: purple;
+}
+
+span#link-lookalike:hover {
+  color: red;
+}
