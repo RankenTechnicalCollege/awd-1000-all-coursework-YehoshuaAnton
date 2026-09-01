@@ -1,0 +1,102 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: styles.css
+    Date: 09/01/2026
+*/
+
+/* CSS reset */
+
+body,
+header,
+nav,
+main,
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Body styles */
+
+body {
+    padding: 2%;
+    background-color: #d1d1e0;
+}
+
+/* Header styles */
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: Georgia, Times, serif;
+    padding: 3%;
+    color: #47476b;
+}
+
+/* Nav styles */
+
+nav {
+    background-color: #47476b;
+}
+
+nav ul {
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: #e3eaf8;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+/* Main styles */
+
+main {
+    padding: 2%;
+    font-family: Geneva, Arial, sans-serif;
+    overflow: auto;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+    font-size: 2em;
+}
+
+main a {
+    color: #47476B;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#css1,
+#css2,
+#css3 {
+    width: 30%;
+    float: left;
+    padding: 0 1%;
+}
+
+/* Footer styles */
+
+footer {
+    clear: left;
+    text-align: center;
+    font-size: 0.85em;
+    color: #47476b;
+    padding: 1% 0;
+    border-top: 3px solid #47476b;
+}
