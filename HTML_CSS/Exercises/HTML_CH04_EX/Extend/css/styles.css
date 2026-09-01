@@ -1,7 +1,7 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: Yehoshua Anton
 File Name: styles.css
+Date: 09/01/2026
 */
 
 /* CSS Reset */
@@ -106,4 +106,8 @@ main a {
 
 .green-hsl {
     background-color: hsl(120, 100%, 50%);
+}
+
+footer.footer {
+    background-color: #ADD8E6;
 }
