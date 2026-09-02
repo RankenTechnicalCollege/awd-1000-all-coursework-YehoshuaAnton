@@ -4,6 +4,65 @@
     Date: 09/01/2026
 */
 
-h1, h2, h3 {
-    border: 10px, dashed, rgba();
+body>div#wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 0.5em;
+    background: linear-gradient(to bottom, red, green, purple, orange, blue, yellow);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    border: 10px, dashed, rgba(0, 0, 255, .25);
+    margin: 1rem;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, .33);
+}
+
+
+li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin: 0 2em;
+    padding: 1pt;
+    text-decoration: none;
+    background-color: #FFFFFF40;
+}
+
+a:hover {
+    color: beige;
+    text-decoration: line-through;
+    font: italic bolder ultra-expanded 2rem/1em "Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 10px 10pt goldenrod;
+}
+
+a:focus {
+    color: yellow;
+}
+
+main {
+    margin: 0 20px;
+    padding: 0 5px;
+}
+
+.book-title {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#crazy {
+    font-family: Wingdings, fantasy;
+    width: 1em;
+    margin: auto;
+    padding: 0;
+    background-color: rgba(255, 255, 255, .33);
+}
+
+footer img {
+    width: 100%;
 }
