@@ -57,10 +57,15 @@ main {
 
 #crazy {
     font-family: Wingdings, fantasy;
-    width: 1em;
-    margin: auto;
+    margin: 1em;
+    height: 5em;
     padding: 0;
     background-color: rgba(255, 255, 255, .33);
+    overflow: hidden;
+}
+
+#crazy:hover {
+    overflow-y: scroll;
 }
 
 footer img {
