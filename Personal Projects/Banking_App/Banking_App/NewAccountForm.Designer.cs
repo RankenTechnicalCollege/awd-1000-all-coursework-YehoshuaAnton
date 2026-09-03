@@ -33,7 +33,7 @@
             // 
             // confirmButton
             // 
-            confirmButton.Location = new Point(184, 100);
+            confirmButton.Location = new Point(70, 100);
             confirmButton.Name = "confirmButton";
             confirmButton.Size = new Size(75, 23);
             confirmButton.TabIndex = 6;
@@ -43,7 +43,7 @@
             // 
             // cancelButton
             // 
-            cancelButton.Location = new Point(68, 100);
+            cancelButton.Location = new Point(182, 100);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 23);
             cancelButton.TabIndex = 5;
@@ -63,9 +63,9 @@
             // accountTypeLabel
             // 
             accountTypeLabel.AutoSize = true;
-            accountTypeLabel.Location = new Point(20, 15);
+            accountTypeLabel.Location = new Point(19, 15);
             accountTypeLabel.Name = "accountTypeLabel";
-            accountTypeLabel.Size = new Size(82, 15);
+            accountTypeLabel.Size = new Size(83, 15);
             accountTypeLabel.TabIndex = 1;
             accountTypeLabel.Text = "Account Type:";
             // 
@@ -81,9 +81,9 @@
             accountTypeComboBox.FormattingEnabled = true;
             accountTypeComboBox.ItemHeight = 15;
             accountTypeComboBox.Items.AddRange(new object[] { "Savings", "Checking" });
-            accountTypeComboBox.Location = new Point(108, 12);
+            accountTypeComboBox.Location = new Point(105, 12);
             accountTypeComboBox.Name = "accountTypeComboBox";
-            accountTypeComboBox.Size = new Size(202, 23);
+            accountTypeComboBox.Size = new Size(205, 23);
             accountTypeComboBox.TabIndex = 2;
             // 
             // NewAccountForm

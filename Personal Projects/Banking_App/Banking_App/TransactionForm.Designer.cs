@@ -37,42 +37,42 @@
             // 
             amountLabel.AutoSize = true;
             amountLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            amountLabel.Location = new Point(46, 53);
+            amountLabel.Location = new Point(36, 21);
             amountLabel.Name = "amountLabel";
             amountLabel.Size = new Size(72, 17);
-            amountLabel.TabIndex = 3;
+            amountLabel.TabIndex = 1;
             amountLabel.Text = "Amount: $";
             amountLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // amountTextBox
             // 
-            amountTextBox.Location = new Point(114, 52);
+            amountTextBox.Location = new Point(105, 20);
             amountTextBox.Name = "amountTextBox";
-            amountTextBox.Size = new Size(196, 23);
-            amountTextBox.TabIndex = 4;
+            amountTextBox.Size = new Size(205, 23);
+            amountTextBox.TabIndex = 2;
             // 
             // descriptionTextBox
             // 
-            descriptionTextBox.Location = new Point(105, 17);
+            descriptionTextBox.Location = new Point(105, 53);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(205, 23);
-            descriptionTextBox.TabIndex = 2;
+            descriptionTextBox.TabIndex = 4;
             // 
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
             descriptionLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            descriptionLabel.Location = new Point(29, 20);
+            descriptionLabel.Location = new Point(29, 54);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(79, 17);
-            descriptionLabel.TabIndex = 1;
+            descriptionLabel.TabIndex = 3;
             descriptionLabel.Text = "Description:";
             descriptionLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cancelButton
             // 
             cancelButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cancelButton.Location = new Point(46, 123);
+            cancelButton.Location = new Point(172, 123);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 24);
             cancelButton.TabIndex = 7;
@@ -83,7 +83,7 @@
             // confirmButton
             // 
             confirmButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            confirmButton.Location = new Point(194, 123);
+            confirmButton.Location = new Point(69, 123);
             confirmButton.Name = "confirmButton";
             confirmButton.Size = new Size(75, 24);
             confirmButton.TabIndex = 8;
@@ -109,7 +109,9 @@
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(205, 23);
             dateTimePicker.TabIndex = 6;
-            dateTimePicker.Value = new DateTime(2024, 3, 2, 22, 31, 33, 0);
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "ddd, MMM. dd, yyyy";
+            dateTimePicker.Value = DateTime.Today;
             // 
             // TransactionForm
             // 
