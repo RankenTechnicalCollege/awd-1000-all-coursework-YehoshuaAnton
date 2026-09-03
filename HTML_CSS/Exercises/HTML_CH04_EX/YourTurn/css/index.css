@@ -6,14 +6,18 @@
 
 /* CSS reset */
 
-body,
-header,
-nav,
-main,
-footer {
+* {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+/* Body style */
+
+body>div#wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
 }
 
 /* img */
@@ -21,4 +25,62 @@ footer {
 img {
     max-width: 100%;
     display: block;
+}
+
+/* Header style */
+
+header {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.banner {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Nav style */
+
+nav,
+footer {
+    position: sticky;
+    background-color: black;
+    grid-column: 1 / -1;
+}
+
+nav {
+    top: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: .5em;
+}
+
+a.link {
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+}
+
+a:visited {
+    color: lightsteelblue;
+}
+
+a:hover {
+    color: red;
+}
+
+
+/* Main style */
+
+main {
+    grid-column: 2 / -2;
+}
+
+/* Footer style */
+
+footer {
+    bottom: 0;
+    color: white;
 }

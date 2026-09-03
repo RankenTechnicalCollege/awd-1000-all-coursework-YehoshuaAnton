@@ -1,0 +1,8 @@
+a.contact {
+  text-decoration: none;
+  color: black;
+}
+
+.contact:visited {
+  color: purple;
+}
