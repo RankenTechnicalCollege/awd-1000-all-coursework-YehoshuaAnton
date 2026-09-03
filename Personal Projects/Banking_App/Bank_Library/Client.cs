@@ -14,7 +14,7 @@
             AddAccount(accountType, accountName);
         }
 
-        private Client() { } // Serialization requires a parameterless construtor
+        private Client() { } // Serialization requires a parameterless constructor
 
         // Make RNG for Client ID
         private static readonly Random random = new();
