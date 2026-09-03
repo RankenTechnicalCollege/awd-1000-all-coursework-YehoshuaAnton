@@ -12,34 +12,41 @@
     border: 0;
 }
 
-/* Body style */
+/* Body styles */
 
-body>div#wrapper {
+div#wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: auto;
 }
 
-/* img */
+/* Image styles */
 
 img {
     max-width: 100%;
     display: block;
 }
 
-/* Header style */
+/* Header styles */
 
 header {
     grid-column: 1 / -1;
     text-align: center;
 }
 
-.banner {
-    grid-column: 1 / -1;
-    width: 100%;
+@font-face {
+    font-family: Clipper;
+    src: url(../fonts/ClipperPersonalUse-Bg13.ttf);
 }
 
-/* Nav style */
+header div.header1 {
+    font: normal small-caps bolder normal 3em/15px Clipper;
+    text-shadow: 2px 2px gray;
+    padding: 15px;
+    margin: 0.5em;
+}
+
+/* Nav styles */
 
 nav,
 footer {
@@ -52,10 +59,41 @@ nav {
     top: 0;
 }
 
+nav ul {
+    display: flex;
+}
+
 nav ul li {
     display: inline;
-    padding: .5em;
+    margin: auto;
+    padding: 1px;
 }
+
+.banner {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Main styles */
+
+main {
+    grid-column: 2 / -2;
+    margin: 2pt 0;
+}
+
+main img {
+    margin-right: 1em;
+    float: left;
+}
+
+/* Footer styles */
+
+footer {
+    bottom: 0;
+    color: white;
+}
+
+/* Anchor styles */
 
 a.link {
     display: inline-block;
@@ -63,24 +101,10 @@ a.link {
     color: lightgray;
 }
 
-a:visited {
+a.link:visited {
     color: lightsteelblue;
 }
 
-a:hover {
+a.link:hover {
     color: red;
-}
-
-
-/* Main style */
-
-main {
-    grid-column: 2 / -2;
-}
-
-/* Footer style */
-
-footer {
-    bottom: 0;
-    color: white;
 }
