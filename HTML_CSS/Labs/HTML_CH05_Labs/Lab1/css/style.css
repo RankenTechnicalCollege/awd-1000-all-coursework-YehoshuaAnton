@@ -1,0 +1,156 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: styles.css
+    Date: 09/01/2026
+*/
+
+/* CSS reset */
+
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for images */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for mobile viewport */
+
+/* Hide tab-desk class */
+
+.tab-desk {
+    display: none;
+}
+
+/* Style rules for header content */
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #373684;
+}
+
+header h1 {
+    font-family: "DM Serif Display", serif;
+}
+
+/* Style rules for nav */
+
+nav {
+    background-color: #373684;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    border-top: 1px solid #E5E9FC;
+    font-size: 2em;
+}
+
+nav li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+/* Style rules for main */
+
+main {
+    padding: 2%;
+    background-color: #E5E9FE;
+    overflow: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+}
+
+#piano,
+#guitar,
+#violin {
+    margin: 0 2%;
+}
+
+#info {
+    clear: left;
+    background-color: #C0CAF7;
+    padding: 1% 2%;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
+.round {
+    border-radius: 8px;
+}
+
+#contact {
+    text-align: center;
+}
+
+.tel-link {
+    background-color: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+
+#contact .email-link {
+    color: #4645A8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map {
+    border: 5px solid #373684;
+    width: 95%;
+    height: 50%;
+}
+
+/* Style rules for footer */
+
+footer {
+    text-align: center;
+    font-size: 0.65em;
+    clear: left;
+}
+
+footer a {
+    color: #4645A8;
+    text-decoration: none;
+}
