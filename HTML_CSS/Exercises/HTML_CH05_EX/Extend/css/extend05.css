@@ -1,0 +1,54 @@
+/* 
+    Student's Name: Yehoshua Anton
+    File Name: extend05.css
+    Today's Date: 09/04/2026
+*/
+body {
+    background-color: #dde3fd;
+}
+
+#container {
+    padding-bottom: 500px;
+}
+
+.box {
+    border: 1px solid #000;
+    margin: 2%;
+    padding: 2%;
+    background-color: #798ef6;
+    color: #091034;
+    width: 400px;
+    height: 170px;
+}
+
+/* sticky */
+
+.sticky {
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+/* relative */
+
+.relative {
+    position: relative;
+    top: 180px;
+    left: 60px;
+}
+
+/* fixed */
+
+.fixed {
+    position: fixed;
+    top: 90px;
+    right: 30px;
+}
+
+/* absolute */
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
