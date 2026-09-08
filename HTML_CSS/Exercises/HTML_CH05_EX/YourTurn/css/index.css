@@ -1,0 +1,128 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: index.css
+    Date: 09/08/2026
+*/
+
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Imported fonts */
+
+@font-face {
+    font-family: Clipper;
+    src: url(../fonts/ClipperPersonalUse-Bg13.ttf);
+}
+
+/* Body styles */
+
+div#wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
+}
+
+/* Image styles */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header styles */
+
+header {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+header div.header1 {
+    font: normal small-caps bolder normal 2em/15px Clipper;
+    text-shadow: 2px 2px gray;
+    padding: 15px;
+    margin: 0.5em;
+}
+
+/* Nav styles */
+
+nav,
+footer {
+    position: sticky;
+    background-color: black;
+    grid-column: 1 / -1;
+}
+
+nav {
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: auto;
+    padding: 1px;
+}
+
+.banner {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Main styles */
+
+main {
+    grid-column: 2 / -2;
+    margin: 2pt 0;
+}
+
+main img {
+    margin-right: 1em;
+    float: left;
+}
+
+/* Footer styles */
+
+footer {
+    bottom: 0;
+    color: white;
+}
+
+/* Anchor styles */
+
+a.link {
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+}
+
+a.link:visited {
+    color: lightsteelblue;
+}
+
+a.link:hover {
+    color: red;
+}
+
+/* Media rules */
+
+/* Styles for 601+px */
+
+@media(min-width: 601px) {
+    header div.header1 {
+        font-size: 3em;
+    }
+}
+
+@media(min-width: 601) {
+    footer {
+        position: static;
+    }
+}
