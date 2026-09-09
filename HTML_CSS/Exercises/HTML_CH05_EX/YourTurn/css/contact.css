@@ -15,24 +15,20 @@ a.contact {
   color: purple;
 }
 
-/* Map styles */
-
-iframe {
-  display: none;
-}
-
-.map-link {
-  display: inline;
-  text-decoration: none;
-}
-
-/* Footer styles */
-
-footer {
-  clear: both;
-}
-
 /* Media rules */
+
+/* Styles for 600px and less */
+
+@media(max-width: 600px) {
+  iframe {
+    display: none;
+  }
+
+  .map-link {
+    display: inline;
+    text-decoration: none;
+  }
+}
 
 /* Styles for 601+px */
 
@@ -42,5 +38,9 @@ footer {
     float: right;
     border: 3px groove black;
     width: 60%;
+  }
+
+  footer {
+    clear: both;
   }
 }
