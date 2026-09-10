@@ -1,0 +1,73 @@
+/*
+  Student Name: Yehoshua Anton
+  File Name: styles.css
+  Date: 09/09/2026
+*/
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url(../fonts/PTSerif-Regular.ttf);
+}
+
+body {
+  font-family: "PT serif";
+  background-color: antiquewhite;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media(max-width: 600px) {
+  nav ul {
+    list-style-type: none;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+}
+
+@media(min-width: 601px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+a:hover {
+  color: red;
+}
+
+nav {
+  top: 0;
+  position: sticky;
+}
+
+@media(min-width: 768px) {
+  body {
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    padding: 1rem;
+    font-size: 325%;
+  }
+}
