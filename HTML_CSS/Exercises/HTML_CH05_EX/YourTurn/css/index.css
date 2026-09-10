@@ -107,10 +107,13 @@ a.link:hover {
         top: 0;
         position: sticky;
         grid-column: 1 / -1;
+        background-color: black;
+        border-bottom: 1% solid black;
+    }
+
+    nav div.banner {
         display: grid;
         grid-template-columns: auto auto;
-        background-color: black;
-        border-bottom: 1px solid black;
     }
 
     nav div.banner img {
@@ -136,6 +139,10 @@ a.link:hover {
 @media(min-width: 601px) and (max-width: 792px) {
     header div.header1 {
         font-size: 3em;
+    }
+
+    nav {
+        display: grid;
     }
 
     div.banner {
@@ -179,8 +186,8 @@ a.link:hover {
         top: 0;
         position: sticky;
         grid-column: 1 / -1;
+        background-color: black;
         border-bottom-width: 0;
-        anchor-name: --nav-anchor;
     }
 
     div.banner img {
@@ -190,13 +197,6 @@ a.link:hover {
 
     div.banner div.hamburger-icon {
         display: none;
-    }
-
-    nav {
-        position-anchor: --nav-anchor;
-        position-area: auto;
-        grid-column: 1 / -1;
-        background-color: black;
     }
 
     nav ul {
