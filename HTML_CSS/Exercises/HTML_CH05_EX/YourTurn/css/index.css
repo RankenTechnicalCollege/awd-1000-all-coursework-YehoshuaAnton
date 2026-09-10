@@ -57,41 +57,12 @@ header h3 {
     font-family: "PT Serif";
 }
 
-/* Nav styles */
-
-@media(max-width: 600px) {
-    nav {
-        top: 0;
-        position: sticky;
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: auto auto;
-        background-color: black;
-        border-bottom: 1px solid black;
-    }
-
-    nav div.hamburger-icon {
-        font-size: 2em;
-        line-height: 125%;
-        padding: 0 .5rem;
-        grid-area: 1 / 1 / -1 / 2;
-        color: white;
-    }
-
-    nav ul.sidenav {
-        display: none;
-    }
-
-    nav img.banner {
-        grid-area: 1 / -2 / -1 /-1;
-    }
-}
-
 /* Main styles */
 
 main {
     grid-column: 1 / -1;
-    margin: 2pt 0;
+    width: 98%;
+    margin: 2pt auto;
 }
 
 main img {
@@ -129,6 +100,37 @@ a.link:hover {
 
 /* Media rules */
 
+/* Styles for 600px and less */
+
+@media(max-width: 600px) {
+    nav {
+        top: 0;
+        position: sticky;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: black;
+        border-bottom: 1px solid black;
+    }
+
+    nav div.banner img {
+        grid-area: 1 / -2 / -1 /-1;
+    }
+
+    nav div.banner div.hamburger-icon {
+        font-size: 2em;
+        line-height: 125%;
+        padding: 0 .5rem;
+        grid-area: 1 / 1 / -1 / 2;
+        color: white;
+    }
+
+    nav div.navigation ul.links-list {
+        display: none;
+        list-style-type: none;
+    }
+}
+
 /* Styles for 601+px */
 
 @media(min-width: 601px) and (max-width: 792px) {
@@ -136,7 +138,7 @@ a.link:hover {
         font-size: 3em;
     }
 
-    nav {
+    div.banner {
         top: 0;
         position: sticky;
         grid-column: 1 / -1;
@@ -146,31 +148,29 @@ a.link:hover {
         border-bottom: 2px solid black;
     }
 
-    nav img.banner {
+    nav div.banner img {
         grid-area: 1 / -2 / -1 /-1;
     }
 
-    nav div.hamburger-icon {
+    div.banner div.hamburger-icon {
         font-size: 3em;
         padding: 0 1rem;
         grid-area: 1 / 1 / -1 / 2;
         color: white;
     }
 
-    nav ul.topnav {
+    nav ul.links-list {
         display: none;
+        list-style-type: none;
     }
 
     main {
-        grid-column: 2 / -2;
-    }
-
-    footer {
-        position: static;
+        width: 90%;
+        margin: auto;
     }
 }
 
-@media(min-width: 793px) {
+@media(min-width: 768px) {
     header div.header1 {
         font-size: 3em;
     }
@@ -179,20 +179,38 @@ a.link:hover {
         top: 0;
         position: sticky;
         grid-column: 1 / -1;
-        background-color: black;
+        border-bottom-width: 0;
+        anchor-name: --nav-anchor;
     }
 
-    nav div.hamburger-icon {
+    div.banner img {
+        top: 0;
+        position: sticky;
+    }
+
+    div.banner div.hamburger-icon {
         display: none;
     }
 
-    nav ul.topnav {
-        display: flex;
+    nav {
+        position-anchor: --nav-anchor;
+        position-area: auto;
+        grid-column: 1 / -1;
+        background-color: black;
     }
 
-    nav ul.topnav li {
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
         display: inline;
         margin: auto;
         padding: 1px;
+    }
+
+    main {
+        grid-column: 2 / -2;
     }
 }
