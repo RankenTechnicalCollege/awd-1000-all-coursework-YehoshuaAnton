@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 /* Imported fonts */
@@ -111,6 +112,7 @@ a.link:hover {
     }
 
     nav div.banner {
+        position: relative;
         display: grid;
         grid-template-columns: auto auto;
     }
@@ -135,10 +137,17 @@ a.link:hover {
     }
 
     nav div.navigation ul.links-list.open {
-        display: block;
-        text-align: center;
-        font-size: 1.25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        background-color: black;
+        font-size: 1.5em;
         padding: 0.5%;
+    }
+
+    nav div.navigation ul.links-list.open li {
+        padding: 10%;
     }
 }
 
