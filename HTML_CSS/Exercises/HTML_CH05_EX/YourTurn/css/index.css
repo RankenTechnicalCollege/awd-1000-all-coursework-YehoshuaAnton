@@ -108,12 +108,12 @@ a.link:hover {
         position: sticky;
         grid-column: 1 / -1;
         background-color: black;
-        border-bottom: 1% solid black;
     }
 
     nav div.banner {
         display: grid;
         grid-template-columns: auto auto;
+        border-bottom: 1% solid black;
     }
 
     nav div.banner img {
@@ -132,6 +132,8 @@ a.link:hover {
         display: none;
         list-style-type: none;
     }
+
+    nav div.navigation ul.links-list.open {}
 }
 
 /* Styles for 601+px */
@@ -142,16 +144,15 @@ a.link:hover {
     }
 
     nav {
-        display: grid;
-    }
-
-    div.banner {
         top: 0;
         position: sticky;
         grid-column: 1 / -1;
+        background-color: black;
+    }
+
+    nav div.banner {
         display: grid;
         grid-template-columns: auto auto;
-        background-color: black;
         border-bottom: 2px solid black;
     }
 
@@ -159,7 +160,7 @@ a.link:hover {
         grid-area: 1 / -2 / -1 /-1;
     }
 
-    div.banner div.hamburger-icon {
+    nav div.banner div.hamburger-icon {
         font-size: 3em;
         padding: 0 1rem;
         grid-area: 1 / 1 / -1 / 2;
@@ -171,6 +172,10 @@ a.link:hover {
         list-style-type: none;
     }
 
+    nav div.navigation ul.links-list.open {
+        display: block;
+    }
+
     main {
         width: 90%;
         margin: auto;
@@ -178,6 +183,10 @@ a.link:hover {
 }
 
 @media(min-width: 768px) {
+    header {
+        border-bottom: 2px ridge black;
+    }
+
     header div.header1 {
         font-size: 3em;
     }
@@ -190,12 +199,12 @@ a.link:hover {
         border-bottom-width: 0;
     }
 
-    div.banner img {
+    nav div.banner img {
         top: 0;
         position: sticky;
     }
 
-    div.banner div.hamburger-icon {
+    nav div.banner div.hamburger-icon {
         display: none;
     }
 
