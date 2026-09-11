@@ -113,11 +113,11 @@ a.link:hover {
     nav div.banner {
         display: grid;
         grid-template-columns: auto auto;
-        border-bottom: 1% solid black;
     }
 
     nav div.banner img {
         grid-area: 1 / -2 / -1 /-1;
+        border-bottom: 1% solid black;
     }
 
     nav div.banner div.hamburger-icon {
@@ -126,6 +126,7 @@ a.link:hover {
         padding: 0 .5rem;
         grid-area: 1 / 1 / -1 / 2;
         color: white;
+        cursor: pointer;
     }
 
     nav div.navigation ul.links-list {
@@ -133,12 +134,17 @@ a.link:hover {
         list-style-type: none;
     }
 
-    nav div.navigation ul.links-list.open {}
+    nav div.navigation ul.links-list.open {
+        display: block;
+        text-align: center;
+        font-size: 1.25em;
+        padding: 0.5%;
+    }
 }
 
 /* Styles for 601+px */
 
-@media(min-width: 601px) and (max-width: 792px) {
+@media(min-width: 601px) and (max-width: 767px) {
     header div.header1 {
         font-size: 3em;
     }
@@ -153,11 +159,11 @@ a.link:hover {
     nav div.banner {
         display: grid;
         grid-template-columns: auto auto;
-        border-bottom: 2px solid black;
     }
 
     nav div.banner img {
         grid-area: 1 / -2 / -1 /-1;
+        border-bottom: 2px solid black;
     }
 
     nav div.banner div.hamburger-icon {
@@ -165,15 +171,23 @@ a.link:hover {
         padding: 0 1rem;
         grid-area: 1 / 1 / -1 / 2;
         color: white;
+        cursor: pointer;
     }
 
-    nav ul.links-list {
+    nav div.navigation ul.links-list {
         display: none;
         list-style-type: none;
     }
 
     nav div.navigation ul.links-list.open {
-        display: block;
+        display: flex;
+    }
+
+    nav div.navigation ul.links-list.open li {
+        display: inline;
+        margin: auto;
+        padding: 0.5%;
+        font-size: 1.25em;
     }
 
     main {
@@ -216,7 +230,8 @@ a.link:hover {
     nav ul li {
         display: inline;
         margin: auto;
-        padding: 1px;
+        padding: 1%;
+        font-size: 1.5em;
     }
 
     main {
