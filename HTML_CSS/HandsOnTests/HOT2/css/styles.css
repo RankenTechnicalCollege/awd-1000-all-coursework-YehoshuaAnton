@@ -1,0 +1,95 @@
+/*
+Student Name: Yehoshua Anton
+File Name: styles.css
+Date: 09/15/2026
+*/
+
+/* CSS reset */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F4F4F4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+/* Header styles */
+
+header {
+  background-color: #0A2342;
+  color: white;
+}
+
+header h1 {
+  padding: 1rem;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: .5em;
+}
+
+header nav ul li {
+  margin: auto;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main styles */
+
+section#hero {
+  background-image: url(../images/wrap.jpeg);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+section#about img {
+  float: left;
+}
+
+section#menu-preview {
+  clear: left;
+}
+
+section#menu-preview div.menu-item {
+  display: inline-block;
+  width: 30%;
+  margin: 2% 1%;
+  border: 2px solid black;
+  padding: .5%;
+}
+
+section#menu-preview div.menu-item p span {
+  color: red;
+  font-weight: bold;
+}
+
+iframe {
+  border: 0;
+}
+
+/* Footer styles */
+
+footer {
+  background-color: #0A2342;
+  color: white;
+  text-align: center;
+}
