@@ -1,0 +1,268 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: index.css
+    Date: 09/15/2026
+*/
+
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Imported fonts */
+
+@font-face {
+    font-family: Clipper;
+    src: url(../fonts/ClipperPersonalUse-Bg13.ttf);
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url(../fonts/PTSerif-Regular.ttf);
+}
+
+/* Body styles */
+
+div#wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
+}
+
+/* Image styles */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header styles */
+
+header {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+header div.header1 {
+    font: normal small-caps bolder normal 2em/15px Clipper;
+    text-shadow: 2px 2px gray;
+    padding: 15px;
+    margin: 0.5em;
+}
+
+header h3 {
+    font-family: "PT Serif";
+}
+
+/* Main styles */
+
+main {
+    grid-column: 1 / -1;
+    width: 98%;
+    margin: 2pt auto;
+}
+
+main img {
+    margin-right: 1em;
+    float: left;
+    max-width: 98%;
+    margin: 1%;
+}
+
+/* Footer styles */
+
+footer {
+    bottom: 0;
+    position: sticky;
+    background-color: black;
+    grid-column: 1 / -1;
+    color: white;
+}
+
+/* Anchor styles */
+
+a.link {
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+}
+
+a.link:visited {
+    color: lightsteelblue;
+}
+
+a.link:hover {
+    color: red;
+}
+
+/* Media rules */
+
+/* Styles for 600px and less */
+
+@media(max-width: 600px) {
+    nav {
+        top: 0;
+        position: sticky;
+        grid-column: 1 / -1;
+        background-color: black;
+    }
+
+    nav div.banner {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    nav div.banner img {
+        grid-area: 1 / -2 / -1 /-1;
+        border-bottom: 1% solid black;
+    }
+
+    nav div.banner div.hamburger-icon {
+        font-size: 2em;
+        line-height: 125%;
+        padding: 0 .5rem;
+        grid-area: 1 / 1 / -1 / 2;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav div.navigation ul.links-list {
+        display: none;
+        list-style-type: none;
+    }
+
+    nav div.navigation ul.links-list.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        background-color: black;
+        font-size: 1.5em;
+        padding: 0.5%;
+    }
+
+    nav div.navigation ul.links-list.open li {
+        padding: 10%;
+    }
+}
+
+/* Styles for 601-767px */
+
+@media(min-width: 601px) and (max-width: 767px) {
+    header div.header1 {
+        font-size: 3em;
+    }
+
+    nav {
+        top: 0;
+        position: sticky;
+        grid-column: 1 / -1;
+        background-color: black;
+    }
+
+    nav div.banner {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    nav div.banner img {
+        grid-area: 1 / -2 / -1 /-1;
+        border-bottom: 2px solid black;
+    }
+
+    nav div.banner div.hamburger-icon {
+        font-size: 3em;
+        padding: 0 1rem;
+        grid-area: 1 / 1 / -1 / 2;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav div.navigation ul.links-list {
+        display: none;
+        list-style-type: none;
+    }
+
+    nav div.navigation ul.links-list.open {
+        display: flex;
+    }
+
+    nav div.navigation ul.links-list.open li {
+        display: inline;
+        margin: auto;
+        padding: 0.5%;
+        font-size: 1.25em;
+    }
+
+    main {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* Styles for 678-1440px */
+
+@media(min-width: 768px) {
+    header {
+        border-bottom: 2px ridge black;
+    }
+
+    header div.header1 {
+        font-size: 3em;
+    }
+
+    nav {
+        top: 0;
+        position: sticky;
+        grid-column: 1 / -1;
+        background-color: black;
+        border-bottom-width: 0;
+    }
+
+    nav div.banner img {
+        top: 0;
+        position: sticky;
+    }
+
+    nav div.banner div.hamburger-icon {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: auto;
+        padding: 1%;
+        font-size: 1.5em;
+    }
+
+    main {
+        grid-column: 2 / -2;
+    }
+}
+
+/* Styles for 1440+px */
+
+@media(min-width: 1441px) {
+    body {
+        background: radial-gradient(grey, lightblue, white);
+    }
+}
+
+/* Media Query for print */
+
+@media print {
+    body {
+        color: black;
+        background-color: white;
+    }
+}
