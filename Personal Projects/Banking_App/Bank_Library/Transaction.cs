@@ -11,7 +11,8 @@
             Amount = amount;
         }
 
-        private Transaction() { } // Serialization requires a parameterless constructor
+        // Serialization requires a parameterless constructor
+        private Transaction() { }
 
         // Override the ToString method to return the date, description, and amount of each Transaction
         public override string ToString() {
