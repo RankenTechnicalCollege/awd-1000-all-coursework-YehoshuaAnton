@@ -15,9 +15,9 @@
             Deposit("Monthly Interest", monthlyInterest, dateTime.Date);
         }
 
-        // Print out the account name and ID
+        // Print out the account name
         public override string ToString() {
-            return $"{Name} - {ID}";
+            return $"{Name}";
         }
     }
 }
