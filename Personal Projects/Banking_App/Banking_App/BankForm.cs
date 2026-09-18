@@ -4,9 +4,9 @@ using System.Text;
 namespace Banking_App {
     public partial class BankForm : Form {
         private static BankForm? bankForm;
-        private NewClientForm? newClientForm;
-        private NewAccountForm? newAccountForm;
-        private TransactionForm? transactionForm;
+        private NewClientForm newClientForm;
+        private NewAccountForm newAccountForm;
+        private TransactionForm transactionForm;
         private Client? currentClient;
         private Account? currentAccount;
 
@@ -14,7 +14,7 @@ namespace Banking_App {
         private BankForm() => InitializeComponent();
 
         // Create a single instance of the bank form using the Singleton Pattern
-        public static BankForm? GetBankForm() {
+        public static BankForm GetBankForm() {
             bankForm ??= new BankForm();
             return bankForm;
         }
