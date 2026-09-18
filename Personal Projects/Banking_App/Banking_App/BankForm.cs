@@ -13,7 +13,7 @@ namespace Banking_App {
         //
         private BankForm() => InitializeComponent();
 
-        //
+        // Create a single instance of the bank form using the Singleton Pattern
         public static BankForm? GetBankForm() {
             bankForm ??= new BankForm();
             return bankForm;
@@ -23,10 +23,10 @@ namespace Banking_App {
         private void AddClientButton_Click(object? sender, EventArgs e) {
             currentClient = clientsComboBox.SelectedItem as Client;
             currentAccount = accountComboBox.SelectedItem as Account;
-            clientsComboBox.Items.Clear();
-            accountComboBox.Items.Clear();
-            balanceTextBox.Text = "";
-            transactionsRTB.Text = "";
+            //clientsComboBox.Items.Clear();
+            //accountComboBox.Items.Clear();
+            //balanceTextBox.Text = "";
+            //transactionsRTB.Text = "";
             newClientForm = new NewClientForm();
             newClientForm.NewClientFormClosed += AddNewClient;
             newClientForm.ShowDialog();
@@ -39,8 +39,7 @@ namespace Banking_App {
                 clientsComboBox.Items.AddRange(BankUI.bank.clients.Where(x => !clientsComboBox.Items.Contains(x)).ToArray());
                 clientsComboBox.SelectedItem = BankUI.bank.clients.Last(); // Will automatically select new client when made
                 accountComboBox.SelectedItem = (clientsComboBox.SelectedItem as Client).accounts[0]; // Will automatically select his first account
-            }
-            else {
+            } else {
                 clientsComboBox.Items.AddRange(BankUI.bank.clients.Where(x => !clientsComboBox.Items.Contains(x)).ToArray()); // Won't select anyone, but the list will still be there
             }
             //else {                     // Even if the result was OK, goes to the else
@@ -52,8 +51,6 @@ namespace Banking_App {
 
         //
         private void ClientSelected_ValueChanged(object? sender, EventArgs e) {
-            balanceTextBox.Text = "";
-            transactionsRTB.Text = "";
             accountComboBox.Items.Clear();
             accountComboBox.Items.AddRange((clientsComboBox.SelectedItem as Client).accounts.Where(x => !accountComboBox.Items.Contains(x)).ToArray());
             accountComboBox.SelectedItem = (clientsComboBox.SelectedItem as Client).accounts[0]; // Will automatically select his first account
@@ -107,7 +104,7 @@ namespace Banking_App {
         private void WithdrawButton_Click(object? sender, EventArgs e) {
             if (accountComboBox.SelectedItem != null) {
                 transactionForm = new TransactionForm {
-                    Text = "Withdrawl Form"
+                    Text = "Withdrawal Form"
                 };
                 transactionForm.TransactionFormClosed += AddNewTransaction;
                 transactionForm.ShowDialog();
