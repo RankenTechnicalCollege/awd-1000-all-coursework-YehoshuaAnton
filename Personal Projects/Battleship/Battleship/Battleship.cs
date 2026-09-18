@@ -5,6 +5,8 @@
  *  - A second board
  *  - A way for the player to manually place their ships
  *  - Guessing algorithms for the computer
+ *  - A WinForm app
+ *  - Leaderboards?
  */
 
 namespace Battleship {
@@ -66,7 +68,7 @@ namespace Battleship {
         // Clear the console and redisplay the board
         static void DisplayBoard() {
             Console.Clear();
-            // For dev work only
+            /* For dev work only */
             //Console.WriteLine($"Turn count: {turnCount}\nHit count: {hitCount}\n");
             DrawGrid();
         }
@@ -78,7 +80,7 @@ namespace Battleship {
             for (int i = 1; i <= BOARDSIZE; i++) {
                 firstLine.Append(i < 10 ? $" {i} |" : $"{i} |");
             }
-            Console.Write(firstLine.ToString());
+            Console.Write(firstLine);
             DrawLine();
             // For each row, write the corresponding uppercase letter at the start
             for (int rows = 0; rows < playerBoard.GetLength(0); rows++) {
