@@ -1,0 +1,287 @@
+/* 
+  Student Name: Yehoshua Anton
+  File Name: index.css
+  Date: 09/23/2026
+*/
+
+/* CSS reset */
+
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h3,
+ul,
+aside,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Style rules for body and images */
+
+body {
+  background-color: #F6EEE4;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rules to show mobile class and hide tab-desk class */
+
+.mobile {
+  display: block;
+}
+
+.tab-desk {
+  display: none;
+}
+
+/* Style rules for header area */
+
+.mobile h1,
+.mobile h3 {
+  padding: 2%;
+  text-align: center;
+}
+
+.mobile h1 {
+  font-family: "Emblema One";
+}
+
+.mobile h3 {
+  font-family: Lora;
+}
+
+/* Style rules for navigation area */
+
+nav {
+  background-color: #2A1F14;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  display: block;
+  border-top: 0.5px solid #F6EEE4;
+  font-size: 1.5em;
+  font-family: Geneva, Arial, sans-serif;
+  font-weight: bold;
+}
+
+nav li a {
+  display: block;
+  color: #F6EEE4;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+/* Style rules for main content */
+
+main {
+  padding: 2%;
+  font-family: Lora, Verdana, Arial, sans-serif;
+}
+
+main p {
+  font-size: 1.25em;
+}
+
+main h3 {
+  padding-top: 2%;
+}
+
+main ul {
+  list-style-type: square;
+}
+
+.link {
+  color: #4D3319;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.action {
+  font-size: 1.75em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.round {
+  border-radius: 6px;
+}
+
+aside {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 4px 4px 10px #C5A687;
+}
+
+figure {
+  border: 4px solid #2A1F14;
+  box-shadow: 6px 6px 10px #C5A687;
+  max-width: 400px;
+  margin: 2% auto;
+}
+
+figcaption {
+  padding: 2%;
+  border-top: 4px solid #2A1F14;
+}
+
+#info ul {
+  margin-left: 10%;
+}
+
+#contact {
+  text-align: center;
+}
+
+.tel-link {
+  background-color: #2A1F14;
+  padding: 2%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tel-link a {
+  color: #F6EEE4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style rules for footer content */
+
+footer {
+  font-size: 0.85em;
+  background-color: #2A1F14;
+  color: #F6EEE4;
+  padding: 1% 0%;
+}
+
+footer a {
+  color: #F3E6D8;
+  text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+
+@media screen and (min-width: 620px),
+print {
+  /* Tablet Viewport: Show tab-desk class, hide mobile class */
+
+  .tab-desk {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /* Tablet Viewport: Style rules for nav area */
+
+  nav li {
+    border-top: 0;
+    display: inline-block;
+    font-size: 1.25em;
+  }
+
+  nav li a {
+    padding: 0.5em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  aside {
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Media Query for Desktop Viewport */
+
+@media screen and (min-width: 1000px),
+print {
+  /* Desktop Viewport: Style rules for nav area */
+
+  nav li {
+    font-size: 1.5em;
+  }
+
+  nav li a {
+    padding: 0.5em 1.5em;
+  }
+
+  nav li a:hover {
+    color: #2A1F1480;
+    background-color: #F6EEE4;
+  }
+
+  /* Desktop Viewport: Style rules for main content */
+
+  #info ul {
+    margin-left: 5%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  aside {
+    grid-column: 1 / span 3;
+    font-size: 2em;
+  }
+}
+
+/* Media Query for Large Desktop Viewports */
+
+@media screen and (min-width: 1921px) {
+  body {
+    background: linear-gradient(#F6EEE4, #78593A);
+  }
+
+  #wrapper {
+    width: 1920px;
+    margin: 0 auto;
+  }
+
+  main {
+    background-color: #F6EEE4;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  aside {
+    grid-column: 1 / span 4;
+    font-size: 3em;
+  }
+}
+
+/* Media Query for Print */
+
+@media print {
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+}
