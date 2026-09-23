@@ -1,0 +1,57 @@
+/*
+Student Name: Yehoshua Anton
+File Name: styles07.css
+Date: 09/22/2026
+*/
+
+/* CSS Reset */
+body,
+header,
+main,
+footer,
+h1,
+h3,
+section,
+article {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style rule for body */
+body {
+	background-color: #dfe7c4;
+}
+
+/* Style rule for header */
+header {
+	font-family: Verdana, Arial, sans-serif;
+	margin-top: 0.2em;
+	background-color: #628c45;
+	color: #dfe7c4;
+	padding: 2%;
+	text-align: center;
+}
+
+/* Style rules for main content  */
+main {
+	background-color: #fff;
+}
+
+article {
+	display: flex;
+	justify-self: space-around;
+}
+
+aside {
+	padding: 2%;
+}
+
+aside a {
+	text-decoration: none;
+}
+
+footer {
+	font-size: .70em;
+	text-align: center;
+}
