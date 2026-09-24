@@ -1,0 +1,47 @@
+/*
+Student Name: Yehoshua Anton
+File Name: styles.css
+Date: 09/24/2026
+*/
+
+/* CSS Reset */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #FFE5DC;
+}
+
+table {
+  border: 5px solid #FD4D0C;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 5px #792101;
+}
+
+caption {
+  font-size: 2em;
+  font-weight: bold;
+  color: #792101;
+  padding: 1rem;
+}
+
+thead {
+  background-color: #A22C02;
+  color: #FFE5DC;
+}
+
+tbody tr:nth-child(2n+1) {
+  background-color: #FE9772;
+}
+
+th,
+td {
+  border: 1px solid #FD4D0C;
+  padding: 0.5em;
+}
