@@ -1,0 +1,64 @@
+/*
+Student Name: Yehoshua Anton
+File Name: styles08.css
+Date: 09/24/2026
+*/
+
+/* Style for body specifies a background color */
+body {
+	background: linear-gradient(to top right, #fff 0%, #6699ff 100%) no-repeat fixed center;
+	font-family: Geneva, Arial, sans-serif;
+}
+
+/* Style for the container element */
+#container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* Style rules for form elements */
+fieldset,
+input {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.btn {
+	border: 0;
+	margin: 0 auto;
+	display: block;
+	padding: 5%;
+	background-color: #003399;
+	font-size: 1.25em;
+	border-radius: 10px;
+	color: white;
+}
+
+/* Style for the footer element */
+footer {
+	font-size: .9em;
+	text-align: center;
+}
+
+/* Media query for tablet layout */
+@media only screen and (min-width: 600px) {
+	form {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 20px;
+
+		.btn {
+			grid-column: 1 / span 2;
+			padding: 3%;
+		}
+	}
+}
