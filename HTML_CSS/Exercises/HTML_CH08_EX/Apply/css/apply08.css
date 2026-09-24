@@ -1,0 +1,67 @@
+/*
+Student Name: Yehoshua Anton
+File Name: apply08.css
+Date: 09/24/2026
+*/
+
+/* CSS Reset */
+body,
+main,
+footer,
+table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style rule for body */
+body {
+	background-color: #f4f9e1;
+}
+
+/* Style rule for the container */
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Style rules for table */
+
+table {
+	width: 80%;
+	margin: 0 auto;
+	border: 3px solid #71881B;
+}
+
+table,
+tr,
+th,
+td {
+	border-collapse: collapse;
+	padding: 2%;
+}
+
+caption {
+	font-size: 2em;
+	padding: 2%;
+	margin-top: 2%;
+}
+
+th,
+td {
+	border: 1px solid #71881B;
+}
+
+td {
+	text-align: center;
+}
+
+tr:nth-child(odd) {
+	background-color: #D3E788;
+}
+
+/* Style for the footer element */
+footer {
+	font-size: .70em;
+	text-align: center;
+}
