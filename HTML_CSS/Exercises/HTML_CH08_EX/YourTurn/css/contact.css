@@ -1,0 +1,46 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: contact.css
+    Date: 09/15/2026
+*/
+
+/* Link styles for contact.html */
+
+a.contact {
+  text-decoration: none;
+  color: black;
+}
+
+.contact:visited {
+  color: purple;
+}
+
+/* Media rules */
+
+/* Styles for 600px and less */
+
+@media(max-width: 600px) {
+  iframe {
+    display: none;
+  }
+
+  .map-link {
+    display: inline;
+    text-decoration: none;
+  }
+}
+
+/* Styles for 601+px */
+
+@media(min-width: 601px) {
+  iframe {
+    display: block;
+    float: right;
+    border: 3px groove black;
+    width: 60%;
+  }
+
+  footer {
+    clear: both;
+  }
+}
