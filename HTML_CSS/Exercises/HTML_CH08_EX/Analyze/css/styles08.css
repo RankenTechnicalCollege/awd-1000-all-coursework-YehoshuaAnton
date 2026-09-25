@@ -27,6 +27,11 @@ fieldset legend {
 	font-weight: bold;
 }
 
+label,
+input {
+	display: block;
+}
+
 .btn {
 	border: 0;
 	margin: 0 auto;
