@@ -1,7 +1,7 @@
 /*
     Student Name: Yehoshua Anton
     File Name: contact.css
-    Date: 09/15/2026
+    Date: 09/29/2026
 */
 
 /* Link styles for contact.html */
@@ -13,6 +13,15 @@ a.contact {
 
 .contact:visited {
   color: purple;
+}
+
+label {
+  display: block;
+}
+
+textarea,
+input:not([type="range"]) {
+  border: 1px solid black;
 }
 
 /* Media rules */

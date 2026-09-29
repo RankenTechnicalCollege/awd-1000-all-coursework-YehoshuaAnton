@@ -2,7 +2,7 @@
 <!--
     Student Name: Yehoshua Anton
     File Name: contact.html
-    Date: 09/24/2026
+    Date: 09/29/2026
 -->
 <html lang="en">
 
@@ -68,6 +68,36 @@
                         Give us a call at <span><a class="contact" href="tel:+13146803331">(555)&nbsp;555&#8209;5555</a></span> or send us an email at <span><a class="contact" href="mailto:soggydoggy@gmail.com">soggydoggy@gmail.com</a></span>.
                     </p>
                 </div>
+
+                <form action="./thanks.html" method="get">
+                    <fieldset>
+                        <legend>Tell us about your experience at Soggy Doggy</legend>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+
+                        <label for="experience">How would you rate your experience?</label>
+                        <input type="range" name="experience" id="experience" min="1" max="5" value="5" list="rating">
+                        <datalist id="rating">
+                            <option value="1" label="&#9785;"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5" label="&#9786;"></option>
+                        </datalist>
+
+                        <label for="feedbackarea">Comments:</label>
+                        <textarea name="feedbackarea" id="feedbackarea" cols="30" rows="10"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Would you like our newsletter?</legend>
+                        <input type="checkbox" name="newsletter" id="newsletter" checked>
+                    </fieldset>
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
             </main>
 
             <footer>
