@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./table-styles2.css">
+  </head>
+
+  <body>
+    <!--table>thead>tr>th[scope="col"]*4^^tbody>(tr>th[scope="row"]+td*3)*7^tfoot>tr>td[colspan="3"]+td-->
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Department</th>
+          <th scope="col">Name</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Years of Service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Editorial</th>
+          <td>Joel Murach</td>
+          <td>joelmurach@yahoo.com</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Anne Boehm</td>
+          <td>anne@murach.com</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Zak Ruvalcaba</td>
+          <td>zak@modulemedia.com</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th scope="row">Marketing</th>
+          <td>Judy Taylor</td>
+          <td>judy@murach.com</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Bethany Lee</td>
+          <td>bethany@murach.com</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">Customer Service</th>
+          <td>Kelly Slivkoff</td>
+          <td>kelly@murach.com</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Juliette Baylon</td>
+          <td>juliette@murach.com</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total Years of Service</td>
+          <td>105</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

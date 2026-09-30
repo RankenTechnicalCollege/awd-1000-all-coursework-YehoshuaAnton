@@ -1,0 +1,23 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 0 0.5em;
+}
+
+th {
+  text-align: left;
+}
+
+tr td:last-of-type {
+  text-align: right;
+}
+
+thead tr:nth-child(odd),
+tbody tr:nth-child(even) {
+  background-color: yellow;
+}
