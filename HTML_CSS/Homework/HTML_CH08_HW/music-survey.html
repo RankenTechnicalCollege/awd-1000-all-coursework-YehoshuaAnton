@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <h1>
+      Music Survey
+    </h1>
+
     <form action="#" method="get">
       <label for="name">Name:</label>
       <input type="text" name="name" id="name">
@@ -21,32 +25,41 @@
           Select your favorite music genre
         </legend>
 
-        <input type="radio" name="genre" id="rock">
-        <label for="rock">Rock</label>
+        <label>
+          <input type="radio" name="genre" id="rock">Rock
+        </label>
 
-        <input type="radio" name="genre" id="pop">
-        <label for="pop">Pop</label>
+        <label>
+          <input type="radio" name="genre" id="pop">Pop
+        </label>
 
-        <input type="radio" name="genre" id="hiphop">
-        <label for="hiphop">Hip Hop</label>
+        <label>
+          <input type="radio" name="genre" id="hiphop">Hip Hop
+        </label>
 
-        <input type="radio" name="genre" id="electronic">
-        <label for="electronic">Electronic</label>
+        <label>
+          <input type="radio" name="genre" id="electronic">Electronic
+        </label>
 
-        <input type="radio" name="genre" id="jazz">
-        <label for="jazz">Jazz</label>
+        <label>
+          <input type="radio" name="genre" id="jazz">Jazz
+        </label>
 
-        <input type="radio" name="genre" id="classical">
-        <label for="classical">Classical</label>
+        <label>
+          <input type="radio" name="genre" id="classical">Classical
+        </label>
 
-        <input type="radio" name="genre" id="country">
-        <label for="country">Country</label>
+        <label>
+          <input type="radio" name="genre" id="country">Country
+        </label>
 
-        <input type="radio" name="genre" id="randb">
-        <label for="randb">R&amp;B</label>
+        <label>
+          <input type="radio" name="genre" id="randb">R&amp;B
+        </label>
 
-        <input type="radio" name="genre" id="genreother">
-        <label for="other">Other</label>
+        <label>
+          <input type="radio" name="genre" id="genreother">Other
+        </label>
       </fieldset>
 
       <fieldset>
@@ -54,48 +67,63 @@
           Select which music services you use (one or more)
         </legend>
 
-        <input type="checkbox" name="spotify" id="spotify">
-        <label for="spotify">Spotify</label>
+        <label>
+          <input type="checkbox" name="spotify" id="spotify">Spotify
+        </label>
 
-        <input type="checkbox" name="applemusic" id="applemusic">
-        <label for="applemusic">Apple Music</label>
+        <label>
+          <input type="checkbox" name="applemusic" id="applemusic">Apple Music
+        </label>
 
-        <input type="checkbox" name="amazonmusic" id="amazonmusic">
-        <label for="amazonmusic">Amazon Music</label>
+        <label>
+          <input type="checkbox" name="amazonmusic" id="amazonmusic">Amazon Music
+        </label>
 
-        <input type="checkbox" name="youtubemusic" id="youtubemusic">
-        <label for="youtubemusic">YouTube Music</label>
+        <label>
+          <input type="checkbox" name="youtubemusic" id="youtubemusic">YouTube Music
+        </label>
 
-        <input type="checkbox" name="siriusxm" id="siriusxm">
-        <label for="siriusxm">SiriusXM</label>
+        <label>
+          <input type="checkbox" name="siriusxm" id="siriusxm">SiriusXM
+        </label>
 
-        <input type="checkbox" name="tidal" id="tidal">
-        <label for="tidal">TIDAL</label>
+        <label>
+          <input type="checkbox" name="tidal" id="tidal">TIDAL
+        </label>
 
-        <input type="checkbox" name="qobuz" id="qobuz">
-        <label for="qobuz">Qobuz</label>
+        <label>
+          <input type="checkbox" name="qobuz" id="qobuz">Qobuz
+        </label>
 
-        <input type="checkbox" name="pandora" id="pandora">
-        <label for="pandora">Pandora</label>
+        <label>
+          <input type="checkbox" name="pandora" id="pandora">Pandora
+        </label>
 
-        <input type="checkbox" name="iheartradio" id="iheartradio">
-        <label for="iheartradio">iHeart Radio</label>
+        <label>
+          <input type="checkbox" name="iheartradio" id="iheartradio">iHeart Radio
+        </label>
 
-        <input type="checkbox" name="deezer" id="deezer">
-        <label for="deezer">Deezer</label>
+        <label>
+          <input type="checkbox" name="deezer" id="deezer">Deezer
+        </label>
 
-        <input type="checkbox" name="soundcloud" id="soundcloud">
-        <label for="soundcloud">SoundCloud</label>
+        <label>
+          <input type="checkbox" name="soundcloud" id="soundcloud">SoundCloud
+        </label>
 
-        <input type="checkbox" name="servicesother" id="servicesother">
-        <label for="servicesother">Other</label>
+        <label>
+          <input type="checkbox" name="servicesother" id="servicesother">Other
+        </label>
       </fieldset>
+
+      <label for="musicdoes">What does music do for you?</label>
+      <textarea name="musicdoes" id="musicdoes" readonly></textarea>
 
       <label for="favoritesong">What is your favorite song and what does it mean to you?</label>
       <textarea name="favoritesong" id="favoritesong" cols="60" rows="3"></textarea>
 
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
+      <button type="submit" id="submit" class="button">Submit</button>
+      <button type="reset" id="reset" class="button">Reset</button>
     </form>
     Yehoshua Anton
     Yehoshua_Anton@insideranken.org

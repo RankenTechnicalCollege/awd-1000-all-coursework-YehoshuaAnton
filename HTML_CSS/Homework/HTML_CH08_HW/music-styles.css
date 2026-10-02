@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: limegreen;
+}
+
+input,
+label {
+  margin: 0.5%;
+}
+
+label {
+  display: block;
+}
+
+legend,
+label:not(fieldset > label),
+.button {
+  font-weight: bolder;
+}
+
+input,
+fieldset,
+textarea,
+.button {
+  border-radius: 5px;
+  background-color: #F3F3F3;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+textarea {
+  display: block;
+  overflow-y: auto;
+}
+
+#submit {
+  padding: 2% 3%;
+  background-color: limegreen;
+  color: white;
+}
+
+#reset {
+  padding: 2% 3%;
+  background-color: red;
+  color: white;
+}
