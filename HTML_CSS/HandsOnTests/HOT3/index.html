@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!--header>h1{Ranken Student Activities}^(nav>p>a[href="index.html"]{Home}+a[href="#"]*3)+(main>section>h2{Upcoming Events}+(table>caption{October Student Events}+(thead>tr>th[scope="col"]*4)+tbody>(tr>td*4)*4)+h2{Event Registration}+p+form[action="#" method="get"]>(fieldset>legend{Personal Information}+(label>input[type="text" name="" id=""])*2+(label>input[type="email" name="" id=""])+(label>select[name="" id=""]>option[value=""]*5))+(fieldset>legend{Student Type}+input[type="radio" name="" id=""]*2)+(fieldset>legend{Interests}+input[type="checkbox" name="" id=""]*4)+(label>textarea[name="" id=""])+button[type="submit" name="" id=""]{Submit}+button[type="reset" name="" id=""]{Reset})+footer-->
+    <header>
+      <h1>
+        Ranken Student Activities
+      </h1>
+    </header>
+
+    <nav>
+      <p>
+        <a href="index.html">Home</a>
+        |
+        <a href="#">Events</a>
+        |
+        <a href="#">Register</a>
+        |
+        <a href="#">Contact</a>
+      </p>
+    </nav>
+
+    <main>
+      <section>
+        <h2>
+          Upcoming Events
+        </h2>
+        <table>
+          <caption>
+            October Student Events
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Event</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Game Night</td>
+              <td>October 8</td>
+              <td>6:00 PM</td>
+              <td>Student Center</td>
+            </tr>
+
+            <tr>
+              <td>Coding Challenge</td>
+              <td>October 15</td>
+              <td>4:00 PM</td>
+              <td>Room 204</td>
+            </tr>
+
+            <tr>
+              <td>Fall Cookout</td>
+              <td>October 22</td>
+              <td>5:30 PM</td>
+              <td>Courtyard</td>
+            </tr>
+
+            <tr>
+              <td>Halloween Party</td>
+              <td>October 29</td>
+              <td>7:00 PM</td>
+              <td>Student Center</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>
+          Event Registration
+        </h2>
+        <p></p>
+        <form action="#" method="get">
+          <fieldset>
+            <legend>
+              Personal Information
+            </legend>
+
+            <label>
+              First Name:
+              <input type="text" name="firstname" id="firstname">
+            </label>
+
+            <label>
+              Last Name:
+              <input type="text" name="lastname" id="lastname">
+            </label>
+
+            <label>
+              Email:
+              <input type="email" name="email" id="email">
+            </label>
+
+            <label>
+              Select an Event
+              <select name="eventselect" id="eventselect">
+                <option value="">Choose an event</option>
+                <option value="gamenight">Game Night</option>
+                <option value="codingchallenge">Coding Challenge</option>
+                <option value="fallcookout">Fall Cookout</option>
+                <option value="halloweenparty">Halloween Party</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              Student Type
+            </legend>
+
+            <label>
+              <input type="radio" name="studenttype" id="fulltime">
+              Full-Time
+            </label>
+
+            <label>
+              <input type="radio" name="studenttype" id="parttime">
+              Part-Time
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              Interests
+            </legend>
+
+            <label>
+              <input type="checkbox" name="gaming" id="gaming">
+              Gaming
+            </label>
+
+            <label>
+              <input type="checkbox" name="coding" id="coding">
+              Coding
+            </label>
+
+            <label>
+              <input type="checkbox" name="sports" id="sports">
+              Sports
+            </label>
+
+            <label>
+              <input type="checkbox" name="communityevents" id="communityevents">
+              Community Events
+            </label>
+          </fieldset>
+
+          <label>
+            Comments or Questions
+            <textarea name="comments" id="comments"></textarea>
+          </label>
+
+          <button type="submit" name="submit" id="submit">Submit</button>
+          <button type="reset" name="reset" id="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
