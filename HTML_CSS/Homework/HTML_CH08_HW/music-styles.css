@@ -37,6 +37,10 @@ fieldset {
   flex-flow: column wrap;
 }
 
+select {
+  width: 100%;
+}
+
 textarea {
   display: block;
   overflow-y: auto;
