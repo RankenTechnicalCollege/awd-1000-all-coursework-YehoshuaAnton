@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <!--header>h1{Ranken Student Activities}^(nav>p>a[href="index.html"]{Home}+a[href="#"]*3)+(main>section>h2{Upcoming Events}+(table>caption{October Student Events}+(thead>tr>th[scope="col"]*4)+tbody>(tr>td*4)*4)+h2{Event Registration}+p+form[action="#" method="get"]>(fieldset>legend{Personal Information}+(label>input[type="text" name="" id=""])*2+(label>input[type="email" name="" id=""])+(label>select[name="" id=""]>option[value=""]*5))+(fieldset>legend{Student Type}+input[type="radio" name="" id=""]*2)+(fieldset>legend{Interests}+input[type="checkbox" name="" id=""]*4)+(label>textarea[name="" id=""])+button[type="submit" name="" id=""]{Submit}+button[type="reset" name="" id=""]{Reset})+footer-->
+    <!--header>h1{Ranken Student Activities}^(nav>ul>(li>a[href="index.html"]{Home})+(li>a[href="#"]*3))+(main>section>h2{Upcoming Events}+(table>caption{October Student Events}+(thead>tr>th[scope="col"]*4)+tbody>(tr>td*4)*4)+h2{Event Registration}+p+form[action="#" method="get"]>(fieldset>legend{Personal Information}+(label>input[type="text" name="" id=""])*2+(label>input[type="email" name="" id=""])+(label>select[name="" id=""]>option[value=""]*5))+(fieldset>legend{Student Type}+input[type="radio" name="" id=""]*2)+(fieldset>legend{Interests}+input[type="checkbox" name="" id=""]*4)+(label>textarea[name="" id=""])+button[type="submit" name="" id=""]{Submit}+button[type="reset" name="" id=""]{Reset})+footer-->
     <header>
       <h1>
         Ranken Student Activities
@@ -17,19 +17,24 @@
     </header>
 
     <nav>
-      <p>
-        <a href="index.html">Home</a>
-        |
-        <a href="#">Events</a>
-        |
-        <a href="#">Register</a>
-        |
-        <a href="#">Contact</a>
-      </p>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">Events</a>
+        </li>
+        <li>
+          <a href="#">Register</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <main>
-      <section>
+      <section id="wrapper">
         <h2>
           Upcoming Events
         </h2>
@@ -81,7 +86,9 @@
         <h2>
           Event Registration
         </h2>
-        <p></p>
+        <p id="register">
+          Please fill out this form to register for an event
+        </p>
         <form action="#" method="get">
           <fieldset>
             <legend>
@@ -157,13 +164,13 @@
             </label>
           </fieldset>
 
-          <label>
+          <label for="comments">
             Comments or Questions
-            <textarea name="comments" id="comments"></textarea>
           </label>
+          <textarea name="comments" id="comments" rows="5"></textarea>
 
-          <button type="submit" name="submit" id="submit">Submit</button>
-          <button type="reset" name="reset" id="reset">Reset</button>
+          <button type="submit" class="btn" name="submit" id="submit">Submit</button>
+          <button type="reset" class="btn" name="reset" id="reset">Reset</button>
         </form>
       </section>
     </main>

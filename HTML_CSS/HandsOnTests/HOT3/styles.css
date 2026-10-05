@@ -1,0 +1,129 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 1rem;
+}
+
+/* Nav Styles */
+
+nav {
+  text-align: center;
+  background-color: black;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 0.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:visited {
+  color: aliceblue;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+/* Main Styles */
+
+#wrapper {
+  margin: 0 1%;
+}
+
+main h2 {
+  text-align: center;
+  margin: 1rem;
+}
+
+/* Table Styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin: 0.5em;
+  font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 0.3em;
+}
+
+thead tr {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: aliceblue;
+}
+
+/* Form Styles */
+
+form>*,
+input {
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+#register {
+  text-align: center;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 1%;
+}
+
+fieldset {
+  margin: 1em 0;
+  border: 2px groove;
+}
+
+input {
+  border: 2px inset;
+}
+
+textarea {
+  border: 1px solid;
+  width: 100%;
+}
+
+.btn {
+  border: 2px outset;
+}
