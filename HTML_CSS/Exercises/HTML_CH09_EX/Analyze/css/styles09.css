@@ -1,0 +1,72 @@
+/*
+    Student Name
+	File Name: 
+	Current Date: 
+*/
+
+/* Style rule for body specifies a background color */
+body {
+	background-color: #c8dbe3;
+}
+
+/* Style rule for the container */
+#container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* Style rule for the header element */
+header {
+	font-family: Verdana, Arial, sans-serif;
+	margin-top: 0.2em;
+	background-color: #0419B8;
+	color: #fff;
+	padding: 2%;
+    text-align: center;
+}
+
+/* Style rules for the nav */
+nav {
+	background-color: #5162E0;
+	padding: 0.5%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+nav li {
+	display: inline;
+}
+
+nav li a {
+	color: #fff;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-decoration: none;
+}
+
+/* Style rule for main content  */
+main {
+	display: block;
+	padding: 2%;
+	background-color: #fff;
+	box-shadow: .5em .5em .5em #404040;
+    text-align: center;
+}
+
+aside {
+  border-radius: 3em;
+  padding: 2%;
+  margin-top: 1%;
+  color: #0419b8;
+}
+
+video {
+	border: 0.5em double #0419B8;
+	border-radius: 3em;
+}
+
+/* Style for the footer element */
+footer {
+	font-size: .80em;
+	text-align: center;
+}
