@@ -61,6 +61,7 @@ aside {
 }
 
 video {
+	max-width: 100%;
 	border: 0.5em double #0419B8;
 	border-radius: 3em;
 }
