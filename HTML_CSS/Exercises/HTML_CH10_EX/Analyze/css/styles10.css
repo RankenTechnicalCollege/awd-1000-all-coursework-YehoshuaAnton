@@ -1,0 +1,71 @@
+/*
+    Author: Yehoshua Anton
+    Date: 10/06/2026
+    File Name: styles.css
+*/
+
+body {
+	background-color: #b3d9ff;
+}
+
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	margin-top: 0.2em;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+nav {
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-align: center;
+}
+
+nav ul {
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+nav li {
+	display: inline;
+	list-style-type: none;
+	margin: 0.3em;
+	padding: 0.4em;
+}
+
+nav li a {
+	color: #0C1C96;
+	text-decoration: none;
+}
+
+main {
+	display: block;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1em;
+	margin-top: 0.5em;
+	padding: 1em;
+	border-radius: 6px;
+	background-color: #fff;
+	border: inset 0.2em #7a6d68;
+}
+
+figure {
+	text-align: center;
+}
+
+img {
+	padding: 1em;
+}
+
+footer {
+	font-size: .90em;
+	text-align: center;
+	margin-top: 2em;
+}
