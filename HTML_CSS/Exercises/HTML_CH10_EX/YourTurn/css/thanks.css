@@ -1,0 +1,11 @@
+/*
+    Student Name: Yehoshua Anton
+    File Name: thanks.css
+    Date: 09/29/2026
+*/
+
+main div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
