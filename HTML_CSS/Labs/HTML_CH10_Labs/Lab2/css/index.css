@@ -1,7 +1,7 @@
 /* 
   Student Name: Yehoshua Anton
   File Name: index.css
-  Date: 10/05/2026
+  Date: 10/07/2026
 */
 
 /* CSS reset */
@@ -46,7 +46,8 @@ video {
 }
 
 .tab-desk,
-.desktop {
+.desktop,
+#nav-links {
   display: none;
 }
 
@@ -60,6 +61,7 @@ video {
 
 .mobile h1 {
   font-family: "Emblema One";
+  margin: 2% 0 0 3%;
 }
 
 .mobile h3 {
@@ -72,24 +74,28 @@ nav {
   background-color: #2A1F14;
 }
 
-nav ul {
-  list-style-type: none;
+.mobile-nav a {
+  color: #FFFFFF;
   text-align: center;
-}
-
-nav li {
-  display: block;
-  border-top: 0.5px solid #F6EEE4;
-  font-size: 1.5em;
-  font-family: Geneva, Arial, sans-serif;
-  font-weight: bold;
-}
-
-nav li a {
-  display: block;
-  color: #F6EEE4;
-  padding: 0.5em 2em;
+  font-size: 2em;
   text-decoration: none;
+  padding: 3%;
+  display: block;
+}
+
+.mobile-nav a.nav-icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #F6EEE4;
+  padding: 2%;
+}
+
+.nav-icon div {
+  height: 40px;
+  width: 40px;
+  color: #2A1F14;
 }
 
 /* Style rules for main content */
@@ -168,6 +174,21 @@ figcaption {
   font-weight: bold;
 }
 
+#questions p {
+  cursor: pointer;
+}
+
+#answer {
+  text-align: center;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#answer h2 {
+  display: none;
+}
+
 /* Style rules for form elements */
 
 fieldset,
@@ -220,20 +241,31 @@ print {
     display: block;
   }
 
-  .mobile {
+  .mobile,
+  .mobile-nav {
     display: none;
   }
 
   /* Tablet Viewport: Style rules for nav area */
 
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
   nav li {
     border-top: 0;
     display: inline-block;
     font-size: 1.25em;
+    font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
   }
 
   nav li a {
     padding: 0.5em;
+    display: block;
+    color: #F6EEE4;
+    text-decoration: none;
   }
 
   .grid {
