@@ -36,7 +36,7 @@ namespace Battleship {
                         playerBoard[letter, number] = "*";
                       // But if the coordinates that were guessed are a hit...
                     } else {
-                        // And the coordinates have not yet been guessed...
+                        // Mark the corresponding space with a "!"
                         playerBoard[letter, number] = "!";
                         // Increment the hit counter
                         hitCount++;
