@@ -12,7 +12,7 @@
 namespace Battleship {
     internal class Battleship {
         // Create boolean variables for the game
-        static bool playGame = true, newGame = true;
+        static bool playGame = true;
         static int turnCount = 0, hitCount = 0;
         const int TURNCOUNT = 50, HITCOUNT = 17;
 
@@ -21,47 +21,31 @@ namespace Battleship {
         static int letter, number;
         static readonly string[,] playerBoard = new string[BOARDSIZE, BOARDSIZE], computersBoard = new string[BOARDSIZE, BOARDSIZE];
 
-        /* THERE IS NO NEED FOR SO MANY CHECKS */
-        /* RECONFIGURE FOR POSITIVE CHECKS, NOT NEGATIVE */
         static void Main(string[] args) {
-            // Run once at the beginning of a new game
-            while (newGame == true) {
-                // Reset all spaces of the board to " " and place the ships
-                SetBoard();
-                // Run at the beginning of each turn
-                while (playGame == true) {
-                    // Erase the old board and redisplay the new one
-                    DisplayBoard();
-                    // If the coordinates are not correctly formatted or the player has already guessed them...
-                    if (!FindCoordinates() || playerBoard[letter, number] != " ") {
-                        // Decrement the turn counter
-                        turnCount--;
-                      // If the player hasn't yet guessed the coordinates...
+            // Set all spaces of the board to " " and place the ships
+            SetBoard();
+            // Run at the beginning of each turn
+            while (playGame == true) {
+                // Erase the old board and redisplay the new one
+                DisplayBoard();
+                // If the coordinates are correctly formatted and the player has not yet guessed them...
+                if (FindCoordinates() && playerBoard[letter, number] == " ") {
+                    // If the coordinates that were guessed are a miss...
+                    if (computersBoard[letter, number] == null) {
+                        // Mark the corresponding space with a "*"
+                        playerBoard[letter, number] = "*";
+                      // But if the coordinates that were guessed are a hit...
                     } else {
-                        // If the coordinates that were guessed are a miss...
-                        if (computersBoard[letter, number] == null) {
-                            // Mark the corresponding space with a "*"
-                            playerBoard[letter, number] = "*";
-                          // But if the coordinates that were guessed are a hit...
-                        } else {
-                            // And if the space has already been guessed...
-                            if (playerBoard[letter, number] != " ") {
-                                // Decrement the hit counter
-                                hitCount--;
-                              // But if the coodrinates have not yet been guessed...
-                            } else {
-                                // Mark the corresponding space with a "!"
-                                playerBoard[letter, number] = "!";
-                                // Increment the hit counter
-                                hitCount++;
-                            }
-                        }
+                        // And the coordinates have not yet been guessed...
+                        playerBoard[letter, number] = "!";
+                        // Increment the hit counter
+                        hitCount++;
                     }
                     // Increment the turn counter
                     turnCount++;
-                    // Run the end-of-game script
-                    EndGame();
                 }
+                // Run the end-of-game script
+                EndGame();
             }
         }
 
@@ -229,8 +213,6 @@ namespace Battleship {
                 SetBoard();
               // If the parsed input is 'N'...
             } else if (playAgain[0] == 'N') {
-                // End the program by setting the "game is running" loop to false
-                newGame = false;
                 // Close the console window
                 Environment.Exit(0);
               // If the parsed input is neither 'Y' nor 'N'...
