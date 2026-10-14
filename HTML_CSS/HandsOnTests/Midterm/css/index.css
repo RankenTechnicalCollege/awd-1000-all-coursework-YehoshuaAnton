@@ -1,0 +1,125 @@
+/* Default styles */
+
+/* CSS reset */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* CSS Grid */
+div#grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Media query for smallest viewport */
+
+@media screen and (width>=20rem
+  /*320px*/
+) {
+  nav {
+    grid-column: 1 / -1;
+    background-color: black;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    padding: 1px 1%;
+  }
+
+  nav ul li:hover {
+    background-color: white;
+  }
+
+  nav ul li a {
+    font-size: .75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+
+  nav ul li a:hover {
+    color: black;
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+
+  header h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+/* Media query for extra-small viewports */
+
+@media screen and (width>=27rem
+  /*432px*/
+) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Media query for small viewports */
+
+@media screen and (width>=40rem
+  /*640px*/
+) {
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media query for medium viewports */
+
+@media screen and (width>=48rem
+  /*768px*/
+) {
+  nav ul li a {
+    font-size: 2rem;
+  }
+}
+
+/* Media query for large viewports */
+
+@media screen and (width>=64rem
+  /*1024px*/
+) {
+  nav ul li a {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media query for extra-large viewports */
+
+@media screen and (width>=80rem
+  /*1280px*/
+) {
+  nav ul li a {
+    font-size: 3rem;
+  }
+}
+
+/* Media query for extra-extra-large viewports */
+
+@media screen and (width>=96rem
+  /*1536px*/
+) {
+  nav ul li a {
+    font-size: 3.5rem;
+  }
+}
