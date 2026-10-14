@@ -1,19 +1,5 @@
 /* Default styles */
 
-/* CSS reset */
-
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: black;
-  font-size: 1rem;
-  font-weight: normal;
-  text-decoration: none;
-  list-style: none;
-}
-
 /* CSS Grid */
 div#grid-container {
   display: grid;
@@ -25,6 +11,8 @@ div#grid-container {
 @media screen and (width>=20rem
   /*320px*/
 ) {
+  /* Nav styles */
+
   nav {
     grid-column: 1 / -1;
     background-color: black;
@@ -50,17 +38,32 @@ div#grid-container {
     color: white;
   }
 
-  nav ul li a:hover {
+  nav ul li:hover a {
     color: black;
   }
 
+  /* Header styles */
+
   header {
     grid-column: 1 / -1;
+    margin: 0 1%;
   }
 
   header h1 {
-    text-align: center;
-    font-size: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  header h1 span {
+    font-size: 4rem;
+  }
+
+  #yehoshua {
+    align-self: flex-start;
+  }
+
+  #anton {
+    align-self: flex-end;
   }
 }
 
