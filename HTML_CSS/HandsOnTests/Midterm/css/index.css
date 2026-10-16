@@ -16,6 +16,8 @@ div#grid-container {
   nav {
     grid-column: 1 / -1;
     background-color: black;
+    position: sticky;
+    top: 0;
   }
 
   nav ul {
@@ -65,6 +67,36 @@ div#grid-container {
   #anton {
     align-self: flex-end;
   }
+
+  /* Main styles */
+
+  main {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  main section {
+    grid-column: 1 / -1;
+    height: 100vh;
+    margin: 0 1%;
+    padding: 26px 0 0 0;
+  }
+
+  /* #about styles */
+
+  /* #resume styles */
+
+  main section#resume object {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  /* #contact styles */
+
+  /* #coursework styles */
+
+  /* #portfolio styles */
 }
 
 /* Media query for extra-small viewports */
