@@ -92,14 +92,8 @@ div#grid-container {
 
   /* #resume styles */
 
-  main section#resume iframe {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-
   main section#resume object {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     margin: auto;
   }
@@ -190,6 +184,4 @@ div#grid-container {
   main section#resume {
     height: 200vh;
   }
-
-  main section#resume object {}
 }
