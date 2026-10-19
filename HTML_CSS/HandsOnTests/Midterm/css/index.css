@@ -78,17 +78,29 @@ div#grid-container {
 
   main section {
     grid-column: 1 / -1;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 1%;
-    padding: 26px 0 0 0;
+    padding: 26px 0;
+  }
+
+  main section h2 {
+    text-align: center;
+    font-size: 2rem;
   }
 
   /* #about styles */
 
   /* #resume styles */
 
+  main section#resume iframe {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
   main section#resume object {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
     margin: auto;
   }
 
@@ -157,4 +169,27 @@ div#grid-container {
   nav ul li a {
     font-size: 3.5rem;
   }
+
+  /* Main styles */
+
+  main {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  main section {
+    grid-column: 1 / -1;
+    min-height: 100vh;
+    margin: 0 1%;
+    padding: 86px 0 0 0;
+  }
+
+  /* #resume styles */
+
+  main section#resume {
+    height: 200vh;
+  }
+
+  main section#resume object {}
 }
