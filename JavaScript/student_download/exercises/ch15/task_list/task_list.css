@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 600px;
+    padding: 0.5em 2em 0 2em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+}
+div {
+    margin-bottom: 1em;
+}
+input {
+    margin-right: 0.5em;
+}
+button {
+    width: 7.25em;
+    margin-right: 1em;
+}
+textarea {
+    width: 25em;
+    height: 7em;
+    margin: 1.5em 0 1em 0;
+    padding: 1em;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+#form {
+    float: left; 
+}
+#display {
+    float: right; 
+}
+.clear { 
+    clear: both; 
+    margin: 0;
+}

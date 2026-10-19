@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Email Manager</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div id="form">
+            <h1>Email Manager</h1>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <button id="add_email">Add Email</button>
+        </div>
+        
+        <div id="display">
+            <select name="emails" id="emails" multiple></select><br>
+            <button id="delete_email">Delete Email</button>
+        </div>
+
+        <div class="clear"></div>
+        <p id="msg"></p>
+    </main>
+
+    <script src="email_manager.js"></script>
+</body>
+</html>

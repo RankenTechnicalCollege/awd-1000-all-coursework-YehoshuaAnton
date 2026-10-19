@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 485px;
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+canvas {
+    margin-bottom: .5em;
+}

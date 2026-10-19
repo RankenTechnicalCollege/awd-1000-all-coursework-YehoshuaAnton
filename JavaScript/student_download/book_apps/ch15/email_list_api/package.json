@@ -1,0 +1,17 @@
+{
+  "name": "email_list_api",
+  "version": "1.0.0",
+  "description": "A simple API for maintaining an email list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mary Delamater",
+  "license": "ISC",
+  "type": "module",   
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

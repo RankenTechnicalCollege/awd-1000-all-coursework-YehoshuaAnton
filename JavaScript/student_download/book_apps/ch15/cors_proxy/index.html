@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Use Proxy Server</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Use Proxy Server</h1>
+    </main>
+    <script>
+        const proxy = "http://localhost:8088/";
+        const api = "https://www.flickr.com/services/feeds/photos_public.gne";
+        const url = proxy + api;  // prefix api URL with proxy URL
+        
+        document.addEventListener("DOMContentLoaded", async () => {
+            const response = await fetch(url);
+            const text = await response.text();
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(text,"text/xml");
+            console.log(xmlDoc);
+        });
+   </script>
+</body>
+</html>

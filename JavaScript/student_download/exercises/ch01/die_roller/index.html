@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Die Roller</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>        
+        <h1>
+            <script>
+                // get a random number between 0 and 6
+                const randNum = Math.random() * 6;
+
+                // round up to get a number from 1 to 6.
+                const dieRoll = Math.ceil(randNum);
+
+                // write some text and the number to the web page
+                document.write('Die Roll: ' + dieRoll);
+            </script>
+        </h1>
+        <p>Click Reload to roll again!</p>
+    </body>
+</html>

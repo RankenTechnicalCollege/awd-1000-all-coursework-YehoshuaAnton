@@ -1,0 +1,10 @@
+body {
+    padding: 0 2em;
+}
+ul {
+    list-style: none;
+}
+li {
+    padding-bottom: 0.25em;
+    font-size: 1.25em;
+}

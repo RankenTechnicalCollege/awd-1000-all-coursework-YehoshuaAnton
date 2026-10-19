@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 400px;
+    padding: 0 2em 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+}
+input, button {
+    margin: 0 0.5em 1em 0;
+}
+#error_message {
+    color: red;
+}

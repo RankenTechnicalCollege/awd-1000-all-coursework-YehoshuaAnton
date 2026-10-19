@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 450px;
+    padding: 0 1em 0 2em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+}
+div {
+    margin-bottom: 1em;
+}
+label {
+    display: inline-block;
+    width: 6em;
+}
+input {
+    height: 1.5em;
+    width: 20em;
+    border: 1px solid black;
+    border-radius: 0.25em;
+}
+button {
+    height: 2em;
+    width: 10em;
+    border: 1px solid black;
+    border-radius: 0.25em;
+}
+#message {
+    font-weight: bold;
+    color: red;
+    width: auto;
+}

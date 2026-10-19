@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Invoice</h1>
+    <div>
+        <label for="subtotal">Subtotal:</label>
+        <input type="text" id="subtotal">
+    </div>
+    <div>
+        <label for="tax_amount">Sales Tax:</label>
+        <input type="text" id="tax_amount" disabled>
+    </div>
+    <div>
+        <label for="total">Total</label>
+        <input type="text" id="total" disabled>
+    </div>
+    <div>
+        <label></label>
+        <input type="button" id="calculate" value="Calculate">
+    </div>
+    <script src="lib_invoice.js"></script>
+    <script src="invoice.js"></script>
+</body>
+</html>

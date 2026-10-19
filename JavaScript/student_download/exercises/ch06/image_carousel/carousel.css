@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 800px;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 1em;
+    text-align: center;
+}
+h1, h2 { 
+    color: cornflowerblue;
+}

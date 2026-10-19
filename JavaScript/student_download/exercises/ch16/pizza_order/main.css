@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 485px;
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+canvas {
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 117%;
+}
+h3 {
+    font-size: 100%;
+    margin-bottom: 0;
+}
+ul {
+    list-style-type: none;
+    margin-top: .5em;
+    padding-left: 1em;
+}
+#toppings, #order {
+    float: left;
+    min-height: 12em;
+    min-width: 12em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+#toppings {
+    margin-right: 3em;
+}
+.clear{
+    clear: both;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clock</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1 id="time"></h1>
+    <p id="date"></p>
+  
+    <script type="importmap">
+        {
+          "imports": {
+            "DOM": "../general_modules/DOM.js", 
+            "dayjs": "https://cdn.skypack.dev/dayjs@1.10.7"
+          }
+        }
+    </script>
+    <script src="clock.js" type="module"></script>
+</body>
+</html>

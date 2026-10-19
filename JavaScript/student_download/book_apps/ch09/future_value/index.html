@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Future Value Calculator</title>
+    <link rel="stylesheet" href="future_value.css">
+</head>
+<body>
+    <form action="#" method="get">
+        <h1>The Future Value Calculator</h1>
+
+        <label for="investment">Total investment:</label>
+        <input type="number" id="investment" 
+            min="0" max="1000" step="100" required autofocus>
+        <span>*</span><br>
+
+        <label for="years">Number of years:</label>
+        <input type="number" id="years" min="0" max="10" step="1" required>
+        <span>*</span><br>
+
+        <label>Future value:</label>
+        <input type="text" id="future_value" disabled><br>
+
+        <label></label>
+        <input type="submit" id="calculate" value="Calculate">
+        <input type="reset" id="clear" value="Clear">
+
+        <p id="message"></p>
+    </form>
+
+    <script src="calc_future_value.js"></script>
+    <script src="future_value.js"></script>    
+</body>
+</html>

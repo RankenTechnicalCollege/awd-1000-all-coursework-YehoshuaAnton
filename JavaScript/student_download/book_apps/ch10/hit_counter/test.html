@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Hit Counter</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+</head>
+<body>
+<script>
+
+localStorage.email = "grace@hopper.com";
+const email = localStorage.email;            // email is "grace@hopper.com"
+
+// localStorage.removeItem("email");
+// localStorage.clear();
+
+sessionStorage.score = 100;
+const score = Number(sessionStorage.score);  // score is 100
+
+
+
+alert(score+1);
+
+</script>
+</body>
+</html>

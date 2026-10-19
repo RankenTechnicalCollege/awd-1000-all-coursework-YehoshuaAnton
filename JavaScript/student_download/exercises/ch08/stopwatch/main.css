@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 200px;
+    padding: 0 2em 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+}
+p {
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    height: 3em;
+    min-width: 10em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}

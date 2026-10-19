@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Invoices</title>
+  <link type="text/css" rel="stylesheet" href="invoices.css">
+</head>
+<body>
+    <h1>Invoices</h1>
+    <div>
+        <label for="start_date">Start Date:</label>
+        <input type="text" id="start_date" value="10/01/2024">
+    </div>
+    <div>
+        <label for="end_date">End Date:</label>
+        <input type="text" id="end_date" value="10/31/2024">
+    </div>
+    <div>
+        <label for="paid_status">Paid Status:</label>
+        <input type="radio" name="paid_status" id="both" value="both" checked>Both
+        <input type="radio" name="paid_status" id="paid" value="paid">Paid
+        <input type="radio" name="paid_status" id="unpaid" value="unpaid">Unpaid
+    </div>
+    <div>
+        <input type="button" id="filter_button" value="Filter">
+    </div>
+
+    <table id="invoice_table">
+        <tr>
+            <th>Company</th>
+            <th>Amount Due</th>
+            <th>Due Date</th>
+            <th>Paid</th>
+        </tr>
+    </table>
+
+    <script src="invoices.js"></script>
+</body>
+</html>

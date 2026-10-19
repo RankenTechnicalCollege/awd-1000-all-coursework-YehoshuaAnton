@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roller</title>
+</head>
+<body>
+    <script>
+    "use strict";
+
+    // add a function named rollDie()
+
+    // add a function named rollDice()
+    // this function should call the rollDie() function for each die rolled
+
+    const sides = parseInt(prompt("Enter number of sides per die:", "6"));
+    const numDice = parseInt(prompt("Enter number of dice to roll:", "4"));
+
+    const dice = [];
+
+    // move this code into functions
+    for (let i = 0; i < numDice; i++) {
+        let rollValue = Math.random() * sides;
+        rollValue = Math.ceil(rollValue);
+        dice.push(rollValue);
+    }
+
+    alert("Dice rolled: " + dice.join(" "));
+
+
+    </script>
+</body>
+</html>

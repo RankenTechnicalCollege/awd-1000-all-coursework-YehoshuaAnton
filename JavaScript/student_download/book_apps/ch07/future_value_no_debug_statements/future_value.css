@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    width: 600px;
+    padding: 0 2em 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+}
+div {
+    margin-bottom: 1em;
+}
+label {
+    display: inline-block;
+    width: 11em;
+    text-align: right;
+}
+input {
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 15em;
+}

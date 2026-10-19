@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1em auto;
+    padding-left: 1em;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+h1 {
+    color: cornflowerblue;
+    text-align: center;
+}
+label {
+    display: inline-block;
+    width: 8em;
+}
+input {
+    height: 1.5em;
+    width: 10em;
+    margin: 0 0.5em 1em 0;
+    border: 1px solid black;
+    border-radius: 0.25em;
+}
+input[type="submit"], input[type="reset"] {
+    height: 2em;
+    width: 6em;
+}
+span, #message {
+    color: red;
+}

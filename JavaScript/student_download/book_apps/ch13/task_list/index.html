@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Task List</title>
+    <link rel="stylesheet" href="task_list.css">
+</head>
+
+<body>
+    <div id="form">
+        <h1>Task List</h1>
+        <div>
+            <label for="task">Task:</label>
+            <input type="text" name="task" id="task">
+        </div>
+        <div>
+            <label for="due_date">Due Date:</label>
+            <input type="text" name="due_date" id="due_date">
+        </div>
+            <button id="add_task">Add Task</button>
+            <button id="clear_tasks">Clear Tasks</button>
+    </div>
+    
+    <div id="display">
+        <select name="tasks" id="tasks" multiple></select><br>
+        <button id="delete_task">Delete Task</button>
+    </div>
+
+    <div class="clear"></div>
+    <p id="msg"></p>
+       
+    <script type="importmap">
+        {
+          "imports": {
+            "storage": "../general_modules/storage.js",
+            "DOM": "../general_modules/DOM.js",
+            "task":"./modules/task.js",
+            "task_storage":"./modules/task_storage.js",
+            "task_list":"./modules/task_list.js"
+          }
+        }
+    </script>
+    <script src="task_list.js" type="module"></script>
+</body>
+</html>

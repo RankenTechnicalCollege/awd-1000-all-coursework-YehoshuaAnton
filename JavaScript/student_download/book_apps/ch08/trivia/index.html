@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Trivia</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <h1>My Trivia</h1>
+    <div id="question">
+        <p>You have <span id="seconds">10</span> seconds to answer.</p>
+        <label>What is the capitol of Vermont? </label>
+        <input type="radio" name="city" id="bur" value="Burlington">Burlington 
+        <input type="radio" name="city" id="mont" value="Montpelier">Montpelier
+        <input type="radio" name="city" id="con" value="Concord">Concord
+    </div>
+
+    <script>
+        let timer = null;
+        const div = document.querySelector("#question");
+
+        const updateTime = () => {
+            const span = document.querySelector("#seconds");
+            const seconds = parseInt(span.textContent) - 1;
+            
+            if (seconds == 0) {
+                clearInterval(timer);
+                div.textContent = "Time's up!!";
+            } else {
+                span.textContent = seconds;
+            }
+        };
+
+        const processAnswer = evt => {
+            clearInterval(timer);
+            if (evt.currentTarget.value === "Montpelier") {
+                div.textContent = "Correct!! The capitol of Vermont is Montpelier.";
+            } else {
+                div.textContent = "Sorry - the capitol of Vermont is Montpelier.";
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            timer = setInterval(updateTime, 1000);
+
+            const options = div.querySelectorAll("input");
+            for (let opt of options) {
+                opt.addEventListener("click", processAnswer);
+            }
+        });
+    </script>
+</body>
+</html>
