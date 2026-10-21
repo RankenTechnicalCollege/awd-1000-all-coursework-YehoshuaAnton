@@ -3,8 +3,8 @@
     Chapter case
 
     Tinley Xeriscapes
-    Author: 
-    Date:   
+    Author: Yehoshua Anton
+    Date:   10/21/2026
 
     Filename: js01b.js
 */
