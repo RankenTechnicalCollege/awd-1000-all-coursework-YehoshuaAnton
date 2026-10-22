@@ -35,7 +35,7 @@ div#grid-container {
   }
 
   nav ul li a {
-    font-size: .75rem;
+    font-size: 3.7vw;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
   }
@@ -57,7 +57,7 @@ div#grid-container {
   }
 
   header h1 span {
-    font-size: 4rem;
+    font-size: 20vw;
   }
 
   #yehoshua {
@@ -85,7 +85,7 @@ div#grid-container {
 
   main section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 10vw;
   }
 
   /* #about styles */
@@ -93,7 +93,7 @@ div#grid-container {
   /* #resume styles */
 
   main section#resume object {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     margin: auto;
   }
@@ -110,8 +110,8 @@ div#grid-container {
 @media screen and (width>=27rem
   /*432px*/
 ) {
-  nav ul li a {
-    font-size: 1rem;
+  main section {
+    padding: 27px 0 0 0;
   }
 }
 
@@ -120,28 +120,28 @@ div#grid-container {
 @media screen and (width>=40rem
   /*640px*/
 ) {
-  nav ul li a {
-    font-size: 1.5rem;
+  main section {
+    padding: 37.5px 0 0 0;
   }
 }
 
 /* Media query for medium viewports */
 
-@media screen and (width>=48rem
-  /*768px*/
+@media screen and (width>=53rem
+  /*848px*/
 ) {
-  nav ul li a {
-    font-size: 2rem;
+  main section {
+    padding: 49px 0 0 0;
   }
 }
 
 /* Media query for large viewports */
 
-@media screen and (width>=64rem
-  /*1024px*/
+@media screen and (width>=66rem
+  /*1056px*/
 ) {
-  nav ul li a {
-    font-size: 2.5rem;
+  main section {
+    padding: 61px 0 0 0;
   }
 }
 
@@ -150,8 +150,8 @@ div#grid-container {
 @media screen and (width>=80rem
   /*1280px*/
 ) {
-  nav ul li a {
-    font-size: 3rem;
+  main section {
+    padding: 73px 0 0 0;
   }
 }
 
@@ -160,10 +160,6 @@ div#grid-container {
 @media screen and (width>=96rem
   /*1536px*/
 ) {
-  nav ul li a {
-    font-size: 3.5rem;
-  }
-
   /* Main styles */
 
   main {
@@ -182,6 +178,12 @@ div#grid-container {
   /* #resume styles */
 
   main section#resume {
-    height: 200vh;
+    height: 100vh;
+  }
+
+  main section#resume object {
+    width: 100%;
+    height: 100%;
+    margin: auto;
   }
 }
