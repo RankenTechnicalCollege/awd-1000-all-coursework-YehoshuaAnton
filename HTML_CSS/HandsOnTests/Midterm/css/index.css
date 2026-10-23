@@ -80,7 +80,6 @@ div#grid-container {
     grid-column: 1 / -1;
     min-height: 100vh;
     margin: 0 1%;
-    padding: 26px 0;
   }
 
   main section h2 {
@@ -109,51 +108,31 @@ div#grid-container {
 
 @media screen and (width>=27rem
   /*432px*/
-) {
-  main section {
-    padding: 27px 0 0 0;
-  }
-}
+) {}
 
 /* Media query for small viewports */
 
 @media screen and (width>=40rem
   /*640px*/
-) {
-  main section {
-    padding: 37.5px 0 0 0;
-  }
-}
+) {}
 
 /* Media query for medium viewports */
 
 @media screen and (width>=53rem
   /*848px*/
-) {
-  main section {
-    padding: 49px 0 0 0;
-  }
-}
+) {}
 
 /* Media query for large viewports */
 
 @media screen and (width>=66rem
   /*1056px*/
-) {
-  main section {
-    padding: 61px 0 0 0;
-  }
-}
+) {}
 
 /* Media query for extra-large viewports */
 
 @media screen and (width>=80rem
   /*1280px*/
-) {
-  main section {
-    padding: 73px 0 0 0;
-  }
-}
+) {}
 
 /* Media query for extra-extra-large viewports */
 
@@ -172,7 +151,6 @@ div#grid-container {
     grid-column: 1 / -1;
     min-height: 100vh;
     margin: 0 1%;
-    padding: 86px 0 0 0;
   }
 
   /* #resume styles */
