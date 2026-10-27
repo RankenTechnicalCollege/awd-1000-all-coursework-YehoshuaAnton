@@ -6,103 +6,111 @@ div#grid-container {
   grid-template-columns: repeat(12, 1fr);
 }
 
+/* Nav styles */
+
+nav {
+  grid-column: 1 / -1;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 1px 1%;
+}
+
+nav ul li:active {
+  background-color: white;
+}
+
+nav ul li:hover {
+  background-color: white;
+}
+
+nav ul li a {
+  font-size: 3.6vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+nav ul li:active a {
+  color: black;
+}
+
+nav ul li:hover a {
+  color: black;
+}
+
+/* Header styles */
+
+header {
+  grid-column: 1 / -1;
+  margin: 0 1%;
+}
+
+header h1 {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+header h1 span {
+  font-size: 20vw;
+}
+
+#yehoshua {
+  align-self: flex-start;
+}
+
+#anton {
+  align-self: flex-end;
+}
+
+/* Main styles */
+
+main {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+main section {
+  grid-column: 1 / -1;
+  min-height: 100vh;
+  margin: 0 1%;
+}
+
+main section h2 {
+  text-align: center;
+  font-size: 10vw;
+}
+
+/* #about styles */
+
+/* #resume styles */
+
+main section#resume object {
+  width: 100%;
+  height: 75%;
+  margin: auto;
+}
+
+/* #contact styles */
+
+/* #coursework styles */
+
+/* #portfolio styles */
+
 /* Media query for smallest viewport */
 
 @media screen and (width>=20rem
   /*320px*/
-) {
-  /* Nav styles */
-
-  nav {
-    grid-column: 1 / -1;
-    background-color: black;
-    position: sticky;
-    top: 0;
-  }
-
-  nav ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  nav ul li {
-    padding: 1px 1%;
-  }
-
-  nav ul li:hover {
-    background-color: white;
-  }
-
-  nav ul li a {
-    font-size: 3.7vw;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-  }
-
-  nav ul li:hover a {
-    color: black;
-  }
-
-  /* Header styles */
-
-  header {
-    grid-column: 1 / -1;
-    margin: 0 1%;
-  }
-
-  header h1 {
-    display: flex;
-    flex-flow: column wrap;
-  }
-
-  header h1 span {
-    font-size: 20vw;
-  }
-
-  #yehoshua {
-    align-self: flex-start;
-  }
-
-  #anton {
-    align-self: flex-end;
-  }
-
-  /* Main styles */
-
-  main {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  main section {
-    grid-column: 1 / -1;
-    min-height: 100vh;
-    margin: 0 1%;
-  }
-
-  main section h2 {
-    text-align: center;
-    font-size: 10vw;
-  }
-
-  /* #about styles */
-
-  /* #resume styles */
-
-  main section#resume object {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-
-  /* #contact styles */
-
-  /* #coursework styles */
-
-  /* #portfolio styles */
-}
+) {}
 
 /* Media query for extra-small viewports */
 
@@ -118,14 +126,14 @@ div#grid-container {
 
 /* Media query for medium viewports */
 
-@media screen and (width>=53rem
-  /*848px*/
+@media screen and (width>=48rem
+  /*768px*/
 ) {}
 
 /* Media query for large viewports */
 
-@media screen and (width>=66rem
-  /*1056px*/
+@media screen and (width>=64rem
+  /*1024px*/
 ) {}
 
 /* Media query for extra-large viewports */

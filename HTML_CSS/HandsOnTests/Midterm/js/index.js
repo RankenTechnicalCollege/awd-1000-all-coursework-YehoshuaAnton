@@ -6,7 +6,7 @@
   sectionOffset.forEach((section) => {
     window.addEventListener("resize", () => {
       section.style.paddingTop = `${navHeight.clientHeight}px`;
-      console.log(section.style.paddingTop);
+      window.location = window.top.location;
     });
   });
-})()
+})();
