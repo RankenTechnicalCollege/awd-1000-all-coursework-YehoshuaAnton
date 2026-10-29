@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Favicon -->
+    <!--Create separate sets for light/dark mode-->
+    <link rel="icon" type="image/png" href="./media/images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./media/images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./media/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/images/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Anton">
+    <link rel="manifest" href="./media/images/favicon/site.webmanifest">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="./js/index.js" defer></script>
+
+    <title>Yehoshua Anton - Portfolio</title>
+  </head>
+
+  <body>
+    <div id="grid-container">
+      <nav id="nav">
+        <ul>
+          <li class="home active">
+            <a href="#">Home</a>
+          </li>
+          <li class="about">
+            <a href="#about">About Me</a>
+          </li>
+          <li class="resume">
+            <a href="#resume">Resume</a>
+          </li>
+          <li class="contact">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="coursework">
+            <a href="#coursework">Coursework</a>
+          </li>
+          <li class="portfolio">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+      <header>
+        <section id="home" class="current">
+          <h1>
+            <span id="yehoshua">Yehoshua</span><span id="anton">Anton</span>
+          </h1>
+        </section>
+      </header>
+
+      <main>
+        <section id="about">
+          <h2>
+            About Me
+          </h2>
+        </section>
+
+        <section id="resume">
+          <h2>
+            Resume
+          </h2>
+          <object data="./media/yehoshua_anton_resume.pdf#view=fitH&toolbar=1" type="application/pdf">
+            <p>Your browser does not provide PDF support. <a href="./media/yehoshua_anton_resume.pdf">Download the PDF</a>.</p>
+          </object>
+        </section>
+
+        <section id="contact">
+          <h2>
+            Contact Me
+          </h2>
+        </section>
+
+        <section id="coursework">
+          <h2>
+            Example Coursework
+          </h2>
+        </section>
+
+        <section id="portfolio">
+          <h2>
+            Portfolio
+          </h2>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          &copy;2026 Yehoshua Anton
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
