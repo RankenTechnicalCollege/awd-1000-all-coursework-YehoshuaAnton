@@ -1,16 +1,18 @@
 "use strict";
 
 (() => {
+
   // Dynamically change the offset of the section depending on the height of the nav
 
   const navHeight = document.getElementById("nav");
   const sectionOffset = document.querySelectorAll("section");
-  sectionOffset.forEach((section) => {
-    window.addEventListener("resize", () => {
+  function updateSectionPaddingTop() {
+    sectionOffset.forEach((section) => {
       section.style.paddingTop = `${navHeight.clientHeight}px`;
-      window.location = window.top.location;
     });
-  });
+  }
+  updateSectionPaddingTop();
+  window.addEventListener("resize", updateSectionPaddingTop);
 
   // Add the "active" class to links when clicked and remove it from the previous active link
 
@@ -31,8 +33,7 @@
     let currentSection = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - sectionHeight / (sections.length - 1)) {
+      if (pageYOffset >= sectionTop - navHeight.clientHeight) {
         currentSection = section.getAttribute("id");
       }
     });

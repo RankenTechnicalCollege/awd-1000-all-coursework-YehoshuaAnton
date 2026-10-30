@@ -51,6 +51,10 @@ header {
   margin: 0 1%;
 }
 
+header section {
+  min-height: 100vh;
+}
+
 header h1 {
   display: flex;
   flex-flow: column wrap;
@@ -97,7 +101,7 @@ main section h2 {
 
 main section#resume object {
   width: min(100%, 100vw);
-  height: 75%;
+  min-height: 100%;
   margin: auto;
   border: 2px solid #3C3C3CFF;
 }
