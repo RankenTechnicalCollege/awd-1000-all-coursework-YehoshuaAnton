@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <!--Create separate sets for light/dark mode-->
     <link rel="icon" type="image/png" href="./media/images/favicon/favicon-96x96.png" sizes="96x96">
@@ -26,6 +31,8 @@
   <body>
     <div id="grid-container">
       <nav id="nav">
+        <img class="icon darkmode" src="./media/images/yalogo-darkmode.png" alt="">
+        <img class="icon lightmode" src="./media/images/yalogo-lightmode.png" alt="">
         <ul>
           <li class="home active">
             <a href="#">Home</a>
@@ -33,17 +40,17 @@
           <li class="about">
             <a href="#about">About Me</a>
           </li>
+          <li class="portfolio">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="coursework">
+            <a href="#coursework">Coursework</a>
+          </li>
           <li class="resume">
             <a href="#resume">Resume</a>
           </li>
           <li class="contact">
             <a href="#contact">Contact</a>
-          </li>
-          <li class="coursework">
-            <a href="#coursework">Coursework</a>
-          </li>
-          <li class="portfolio">
-            <a href="#portfolio">Portfolio</a>
           </li>
         </ul>
       </nav>
@@ -63,6 +70,18 @@
           </h2>
         </section>
 
+        <section id="portfolio">
+          <h2>
+            Portfolio
+          </h2>
+        </section>
+
+        <section id="coursework">
+          <h2>
+            Example Coursework
+          </h2>
+        </section>
+
         <section id="resume">
           <h2>
             Resume
@@ -78,23 +97,11 @@
             Contact Me
           </h2>
         </section>
-
-        <section id="coursework">
-          <h2>
-            Example Coursework
-          </h2>
-        </section>
-
-        <section id="portfolio">
-          <h2>
-            Portfolio
-          </h2>
-        </section>
       </main>
 
       <footer>
         <p>
-          &copy;2026 Yehoshua Anton
+          2026 Yehoshua Anton
         </p>
       </footer>
     </div>

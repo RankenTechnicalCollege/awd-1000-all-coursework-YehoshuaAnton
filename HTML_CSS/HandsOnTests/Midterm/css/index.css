@@ -11,21 +11,29 @@ div#grid-container {
 
 nav {
   grid-column: 1 / -1;
+  display: flex;
   background-color: light-dark(#282828FF, white);
   position: sticky;
   top: 0;
 }
 
+.icon {
+  display: none;
+}
+
 nav ul {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 0;
+  justify-content: space-around;
+  align-self: flex-end;
+
 }
 
 nav ul li {
   margin: 0;
-  padding: 0 1%;
+  padding: 1% 1%;
+  flex-grow: 1;
+  text-align: center;
 }
 
 nav ul li:hover,
@@ -34,7 +42,7 @@ nav ul li:hover,
 }
 
 nav ul li a {
-  font-size: 3.6vw;
+  font-size: min(3.6vw, 19px);
   font-family: Arial, Helvetica, sans-serif;
   color: light-dark(white, black);
 }
@@ -51,10 +59,6 @@ header {
   margin: 0 1%;
 }
 
-header section {
-  min-height: 100vh;
-}
-
 header h1 {
   display: flex;
   flex-flow: column wrap;
@@ -62,14 +66,6 @@ header h1 {
 
 header h1 span {
   font-size: 20vw;
-}
-
-#yehoshua {
-  align-self: flex-start;
-}
-
-#anton {
-  align-self: flex-end;
 }
 
 /* Main styles */
@@ -87,12 +83,13 @@ main section {
 }
 
 main section:nth-child(2n-1) {
-  background-color: light-dark(lightgray, #3C3C3CFF);
+  background-color: light-dark(lightgray, rgb(80, 80, 80));
 }
 
 main section h2 {
   text-align: center;
-  font-size: 10vw;
+  font-family: Lora;
+  font-size: min(10vw, 4rem);
 }
 
 /* #about styles */
@@ -147,7 +144,27 @@ footer p {
 
 @media screen and (width>=48rem
   /*768px*/
-) {}
+) {
+  @media (prefers-color-scheme: light) {
+    .darkmode {
+      display: none;
+    }
+
+    .lightmode {
+      display: block;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .lightmode {
+      display: none;
+    }
+
+    .darkmode {
+      display: block;
+    }
+  }
+}
 
 /* Media query for large viewports */
 
@@ -169,7 +186,7 @@ footer p {
   /* Main styles */
 
   main {
-    grid-column: 2 / -2;
+    /* grid-column: 2 / -2; */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
@@ -177,7 +194,6 @@ footer p {
   main section {
     grid-column: 1 / -1;
     min-height: 100vh;
-    margin: 0 1%;
   }
 
   /* #resume styles */
