@@ -31,7 +31,6 @@ nav ul {
 
 nav ul li {
   margin: 0;
-  padding: 1% 1%;
   flex-grow: 1;
   text-align: center;
 }
@@ -42,7 +41,10 @@ nav ul li:hover,
 }
 
 nav ul li a {
-  font-size: min(3.6vw, 19px);
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: min(3.6vw, 18px);
   font-family: Arial, Helvetica, sans-serif;
   color: light-dark(white, black);
 }

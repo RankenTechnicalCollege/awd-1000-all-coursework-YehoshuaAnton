@@ -48,5 +48,6 @@
 
   // Change the background color of the active and hovered links based on the background color of the current section
 
-  let currentSection = document.querySelector(".current");
+  let currentBackground = document.querySelector(".current");
+  console.log(currentBackground.style.backgroundColor);
 })();
