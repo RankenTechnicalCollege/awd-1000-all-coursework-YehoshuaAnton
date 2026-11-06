@@ -7,6 +7,10 @@ div#grid-container {
   background-color: light-dark(white, #282828FF);
 }
 
+.hide {
+  display: none;
+}
+
 /* Nav styles */
 
 nav {
@@ -26,7 +30,6 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-self: flex-end;
-
 }
 
 nav ul li {
@@ -81,7 +84,7 @@ main {
 main section {
   grid-column: 1 / -1;
   min-height: 100vh;
-  background-color: light-dark(white, #282828FF);
+  
 }
 
 main section:nth-child(2n-1) {
@@ -114,10 +117,9 @@ main section#resume object {
 /* Footer styles */
 
 footer {
-  display: flex;
   grid-column: 1 / -1;
   background-color: black;
-  justify-content: center;
+  text-align: center;
 }
 
 footer p {
@@ -134,7 +136,11 @@ footer p {
 
 @media screen and (width>=27rem
   /*432px*/
-) {}
+) {
+  footer p.hide {
+    display: block;
+  }
+}
 
 /* Media query for small viewports */
 
