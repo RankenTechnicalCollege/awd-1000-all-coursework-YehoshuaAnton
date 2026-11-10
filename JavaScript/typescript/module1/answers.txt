@@ -1,0 +1,31 @@
+1.	What is the difference between using a : string type annotation and letting TypeScript infer the type? When would you use each?
+
+		There is no major difference between using a : string type annotation and letting TypeScript infer the type. Letting TypeScript infer the type is good for when a variable is initialized immediately, however, in something like a function, where the return type isn't immediately obvious, it is best to use type annotation.
+
+
+
+
+2.	Explain the difference between any and unknown. Why is unknown considered safer?
+
+		Both the : any and : unknown types allow for skipping the type check entirely. Unknown is considered safer because the type must still be declared before using the variable.
+
+
+
+
+3.	What does it mean for TypeScript to catch an error “at compile time” rather than “at runtime”? Give a short example.
+
+		Catching an error at compile time means that the compiler catches the error as it attempts to build the program before running, as opposed to a runtime error, where the program actually runs until it hits the point where there is an error.
+
+
+
+
+4.	What is a tuple, and how is it different from a regular array?
+
+		A tuple differs from an array as it is capable of storing different data types in a single array.
+
+
+
+
+5.	What does "strict": true in tsconfig.json do, and why would a real project want it turned on?
+
+		strict: true enables strict type checking making it so you need to be more careful when declaring variables null or any.
