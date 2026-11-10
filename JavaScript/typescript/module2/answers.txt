@@ -1,0 +1,10 @@
+1.	What does the ? mean when it appears after a property name in an interface (e.g. gpa?: number)? What does it mean after a function parameter name (e.g. greeting?: string)?
+
+		A "?" after a property name signifies that the following property is optional, and if it appears after a parameter name, it means that the parameter is optional.
+
+
+
+
+2.	What is the difference between interface and type in TypeScript? When would you choose one over the other?
+
+		Interfaces are preferred when typing objects, whereas types are meant for primitives or tuples.
