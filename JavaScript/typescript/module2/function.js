@@ -14,10 +14,10 @@ function totalCredits(...credits) {
 // Task 3
 console.log(applyToScores([100, 90, 80, 70], scoreFormatter));
 function scoreFormatter(score) {
-    if (score > 90) {
+    if (score >= 90) {
         return "A";
     }
-    else if (score > 80) {
+    else if (score >= 80) {
         return "B";
     }
     else {

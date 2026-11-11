@@ -26,9 +26,9 @@ console.log(applyToScores([100, 90, 80, 70], scoreFormatter));
 type ScoreFormatter = (value: number) => string;
 
 function scoreFormatter(score: number): string {
-  if (score > 90) {
+  if (score >= 90) {
     return "A";
-  } else if (score > 80) {
+  } else if (score >= 80) {
     return "B";
   } else {
     return "C";
