@@ -4,8 +4,8 @@
       Project 05-04
 
       Project to display footnotes in a popup window
-      Author: 
-      Date:   
+      Author: Yehoshua Anton
+      Date:   11/12/2026
 
       Filename: footnotes.js
 */
