@@ -15,10 +15,9 @@ const phrases = document.querySelectorAll("article blockquote dfn"),
       length = phrases.length;
 
 for (let i = 0; i < length; i++) {
-      phrases[i].onclick = () => {
+      phrases[i].onclick = function () {
             const phrase = document.createElement("h1");
             phrase.textContent = this.textContent;
-            console.log(typeof(this), this);
 
             const footnote = document.createElement("p");
             const closeButton = document.createElement("input");
@@ -37,7 +36,9 @@ for (let i = 0; i < length; i++) {
             popup.window.document.body.style.backgroundColor = "ivory";
             popup.window.document.body.style.fontSize = "16px";
             popup.window.document.body.style.padding = "10px";
-            popup.document.body.appendChild(phrase, footnote, closeButton);
+            popup.document.body.appendChild(phrase);
+            popup.document.body.appendChild(footnote);
+            popup.document.body.appendChild(closeButton);
             closeButton.onclick = () => {
                   popup.close();
             }
