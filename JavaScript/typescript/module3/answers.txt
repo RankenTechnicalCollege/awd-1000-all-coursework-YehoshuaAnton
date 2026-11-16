@@ -1,0 +1,10 @@
+1.	What is “narrowing,” and how does a typeof check help TypeScript narrow a union type?
+
+		Narrowing is a type check on a union to handle the different types in different ways.
+
+
+
+
+2.	In your own words, explain what a generic type parameter (like <T>) does and why it's useful.
+
+		Generic type parameters are type placeholders that allow for reusable code without explicitly setting a type while still keeping it secure.
