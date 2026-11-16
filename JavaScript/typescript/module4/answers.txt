@@ -1,0 +1,3 @@
+1.	Name the access modifiers you can use on a class property or method, and briefly describe what each one restricts.
+
+		The access modifiers you can use on class properties and methods are public, private, protected, and readonly. Public access means that the property can be accessed from anywhere, private means it is limited to that class, protected is limited to that class and any of it's subclasses, and readonly means that it can only be initialized in the constructor and never be reassigned.
