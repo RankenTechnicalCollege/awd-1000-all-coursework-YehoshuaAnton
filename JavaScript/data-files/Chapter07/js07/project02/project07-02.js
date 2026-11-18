@@ -4,8 +4,8 @@
       Project 07-02
 
       Project to deal cards from a shuffled poker deck
-      Author: 
-      Date:   
+      Author: Yehoshua Anton
+      Date:   11/18/2026
 
       Filename: project07-02.js
 */
@@ -23,13 +23,25 @@ let deckStr = `Ace of Hearts, King of Hearts, Queeen of Hearts, Jack of Hearts,
                10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs,
                5 of Clubs, 4 of Clubs, 3 of Clubs, 2 of Clubs`;
 
-let cards = document.querySelectorAll("div#hand span"); 
+let cards = document.querySelectorAll("div#hand span");
 let cardsLeft = document.getElementById("cardsLeft");
 let deck = [];
 
-document.getElementById("deal").onclick = function() {   
-   
+document.getElementById("deal").onclick = () => {
+      function newDeck() {
+            deck = deckStr.split(",");
+            deck.sort((a, b) => {
+                  return 0.5 - Math.random();
+            });
+      }
 
+      for (let i = 0; i < cards.length; i++) {
+            if (deck.length === 0) {
+                  newDeck();
+            }
+            cards[i].textContent = deck.pop();
+            cardsLeft.textContent = deck.length;
+      }
 }
 
-            
+
