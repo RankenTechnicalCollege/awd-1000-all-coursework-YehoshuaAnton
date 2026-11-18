@@ -4,8 +4,8 @@
       Project 06-04
 
       Project to turn a selection list into a selection of hypertext links
-      Author: 
-      Date:   
+      Author: Yehoshua Anton
+      Date:   11/17/2026
 
       Filename: project06-04.js
 */
@@ -30,33 +30,53 @@ let selectVehicle = document.getElementById("selectVehicle");
 
 // Paragraph containing the text of the selected vehicle
 let vehicle = document.getElementById("vehicle");
+selectVehicle.onclick = () => {
+   vehicle.textContent = `${make.text} ${model.text} ${trim.text}`;
+}
 
 
 // Event handler to modify the content of the Model selection list
 // when the Make selection list changes
 
-make.onchange = function() {
+make.onchange = function () {
    let makeIndex = make.selectedIndex;
    let makeCategory = make.options[makeIndex].text;
-   
+
    if (makeIndex === 0) {
       showAll(model);
    } else {
       filterSelect(model, makeCategory);
-   }  
+   }
 }
 
 // Event handler to modify the content of the Trim selection list
 // when the Model selection list changes
 
-model.onchange = function() {
+model.onchange = function () {
    let modelIndex = model.selectedIndex;
    let modelCategory = model.options[modelIndex].text;
-   
+
    if (modelIndex === 0) {
       showAll(trim);
    } else {
       filterSelect(trim, modelCategory);
-   }     
+   }
 }
 
+function showAll(selectList) {
+   let options = selectList.options;
+   for (let i = 0; i < options.length; i++) {
+      options[i].style.display = "block";
+   }
+}
+
+function filterSelect(selectList, category) {
+   let options = selectList.options;
+   for (let i = 0; i < options.length; i++) {
+      if (options[i].className === category) {
+         options[i].style.display = "block";
+      } else {
+         options[i].style.display = "none";
+      }
+   }
+}
