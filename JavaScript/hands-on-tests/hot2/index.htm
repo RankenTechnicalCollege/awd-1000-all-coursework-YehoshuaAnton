@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <!--
+      JavaScript
+
+      Author: Yehoshua Anton
+      Date:   11/20/2026
+
+      Filename: index.htm
+   -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <title>Hands-on Project 7-3</title>
+      <link rel="stylesheet" href="styles.css" />
+      <script src="modernizr.custom.05819.js"></script>
+   </head>
+
+   <body>
+      <header>
+         <h1>
+            Hands-on Test Chapter 4
+         </h1>
+      </header>
+
+      <article>
+         <h2>Steam Game Sale</h2>
+         <form>
+            <input type="checkbox" id="item1" value="1999" />
+            <label for="item1">Counter Strike ($19.99)</label>
+            <input type="checkbox" id="item2" value="2999" />
+            <label for="item2">Dark Souls III ($29.99)</label>
+            <input type="checkbox" id="item3" value="1349" />
+            <label for="item3">Enter The Gungeon ($13.49)</label>
+            <input type="checkbox" id="item4" value="499" />
+            <label for="item4">Hover Junkers ($4.99)</label>
+            <input type="checkbox" id="item5" value="899" /> <!-- Changed value from 599 to 899 to reflect the actual price -->
+            <label for="item5">Good Robot ($8.99)</label>
+            <input type="button" value="Calculate" id="sButton" />
+         </form>
+         <table>
+            <colgroup>
+               <col class="label" />
+               <col class="amount" />
+            </colgroup>
+            <tbody>
+               <tr>
+                  <td>Item total</td>
+                  <td>0.00</td>
+               </tr>
+               <tr>
+                  <td>Tax</td>
+                  <td>0.00</td>
+               </tr>
+               <tr>
+                  <td>Total with tax</td>
+                  <td>$0.00</td>
+               </tr>
+            </tbody>
+         </table>
+      </article>
+      <script>
+         "use strict";
+         // Add date to page
+         const date = new Date();
+         const dateBox = document.createElement("div");
+         dateBox.textContent = date.toDateString();
+         document.querySelector("article").appendChild(dateBox);
+
+         // function to add values of selected check boxes and display total
+         function calcTotal() {
+
+            var itemTotal = 0;   // Don't use var
+            var tax = 0;         // Don't use var
+            var totalWithTax = 0;// Don't use var
+            const items = document.getElementsByTagName("input"); // Declared the items variable as a constant
+            var cells = document.getElementsByTagName("td"); // Don't use var
+            for (var i = 0; i < items.length; i++) { // Changed the condition from 3 to the length of the items array
+               if (items[i].checked) {
+                  itemTotal += (items[i].value * 1); // Is there a reason to multiply the value by 1?
+                  items[i].checked = false; // Reset the checkboxes
+               }
+            }
+            tax = itemTotal * 0.05; // Changed the tax rate from 10% to 5%
+            totalWithTax = itemTotal + tax; // Corrected incorrect reference to the tax variable
+            cells[1].innerHTML = (itemTotal / 100).toFixed(2);
+            cells[3].innerHTML = (tax / 100).toFixed(2);
+            cells[5].innerHTML = "$" + (totalWithTax / 100).toFixed(2);
+         }
+
+         // add event listener to Submit button
+         var submitButton = document.getElementById("sButton"); // Don't use var
+         submitButton.addEventListener("click", calcTotal); // Added a quotation mark after "click
+
+      </script>
+   </body>
+</html>
