@@ -26,20 +26,21 @@ timer.prototype.runPause = function (timer, minBox, secBox) {
       } else { // If timer.timeID is falsy (null, in this case)
             timer.timeID = window.setInterval(countdown, 1000); // set timer.timeID 
       }
-}
 
-function countdown() {
-      if (timer.seconds > 0) { // If there are more than 0 seconds left on the timer (not including, as the decrement operator will cause a value of 0 to go negative)
-            timer.seconds--; // Decrement the seconds counter by 1
-      } else if (timer.minutes > 0) { // Else if there are no seconds remaining on the timer, but the minutes counter is more than 0 (not including, for the same reason)
-            timer.minutes--; // Decrement the minutes counter by 1
-            timer.seconds = 59; // Reset the seconds counter to 59
-      } else { // If there are neither minutes nor seconds remaining on the timer
-            window.clearInterval(timer.timeID); // Stop the timer by clearing the current interval
-            timer.timeID = null; // Set timer.timeID to null
+      function countdown() {
+            if (timer.seconds > 0) { // If there are more than 0 seconds left on the timer (not including, as the decrement operator will cause a value of 0 to go negative)
+                  timer.seconds--; // Decrement the seconds counter by 1
+            } else if (timer.minutes > 0) { // Else if there are no seconds remaining on the timer, but the minutes counter is more than 0 (not including, for the same reason)
+                  timer.minutes--; // Decrement the minutes counter by 1
+                  timer.seconds = 59; // Reset the seconds counter to 59
+            } else { // If there are neither minutes nor seconds remaining on the timer
+                  window.clearInterval(timer.timeID); // Stop the timer by clearing the current interval
+                  timer.timeID = null; // Set timer.timeID to null
+            }
+            // Set the values of both the minBox and secBox to their counterpart's value in the timer object
+            minBox.value = timer.minutes;
+            secBox.value = timer.seconds;
       }
-      timer.minutes = minBox.value;
-      timer.seconds = secBox.value;
 }
 
 /*---------------Interface Code -----------------*/
@@ -50,16 +51,20 @@ let minBox = document.getElementById("minutesBox");
 let secBox = document.getElementById("secondsBox");
 let runPauseTimer = document.getElementById("runPauseButton");
 
-const myTimer = new timer(minBox.value, secBox.value); // Create a new instance of the timer class initializing it using the values in the minBox and secBox as parameters, and save it in a variable called "myTimer"
+// Create a new instance of the timer class initializing it using the values in the minBox and secBox as parameters, and save it in a variable called "myTimer"
+const myTimer = new timer(minBox.value, secBox.value);
 
-minBox.onchange = function () {
+minBox.onchange = () => {
+      // Every time the minute changes, place the myTimer's minutes value into the value of minBox
       minBox.value = myTimer.minutes;
 }
 
-secBox.onchange = function () {
+secBox.onchange = () => {
+      // Every time the second changes, place the myTimer's seconds value into the value of secBox
       secBox.value = myTimer.seconds;
 }
 
-runPauseTimer.onclick = myTimer.runPause(myTimer, minBox, secBox);
-console.log(myTimer.timeID);
-console.log(myTimer.minutes, myTimer.seconds);
+runPauseTimer.onclick = () => {
+      // When clicked, run myTimer's runPause function, passing myTimer, minBox, and secBox, as parameters for a timer, a minutes box, and a seconds box
+      myTimer.runPause(myTimer, minBox, secBox);
+}
