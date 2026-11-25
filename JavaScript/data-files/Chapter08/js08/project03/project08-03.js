@@ -4,24 +4,45 @@
       Project 08-03
 
       Project to build a pizza using object oriented programming
-      Author: 
-      Date:   
+      Author: Yehoshua Anton
+      Date:   11/24/2026
 
       Filename: project08-03.js
 */
 
 /*---------------- Object Code ----------------------*/
 
+const cart = {
+   items: new Array(),
+   addItem: function (foodItem) {
+      //console.log(this.items)
+      this.items.push(foodItem);
+   }
+}
 
+function pizza() {
+   this.size;
+   this.crust;
+   this.toppings = new Array();
 
+   pizza.prototype.addToCart = function (cart) {
+      console.log(cart, cart.items, this)
+      cart.items.push(this);
+   }
 
+   pizza.prototype.summarize = function () {
+      let summary = `Pizza ${this.size} ${this.crust}`;
+      for (let i = 0; i < this.toppings.length; i++) {
+         summary += ` ${this.toppings[i].name} (${this.toppings[i].side})`;
+      }
+      return summary;
+   }
+}
 
-
-
-
-
-
-
+function topping() {
+   this.name;
+   this.side;
+}
 
 /*----------------------------- Interface Code -------------------------*/
 
@@ -36,7 +57,7 @@ let cartBox = document.getElementById("cart");                       // Shopping
 // Add event handlers for the pizza toppings   
 for (let i = 0; i < toppingOptions.length; i++) {
    toppingOptions[i].onclick = drawPizza;
-} 
+}
 
 // Event Handler for the addToCart button
 addToCart.onclick = updateCart;
@@ -62,7 +83,7 @@ function drawPizza() {
    // Erase current pizza image
    clearPizzaImage();
    // Determine which toppings have been checked
-   let checkedToppings = document.querySelectorAll("input.topping:checked");  
+   let checkedToppings = document.querySelectorAll("input.topping:checked");
 
    // Draw the individual toppings
    for (let i = 0; i < checkedToppings.length; i++) {
@@ -70,22 +91,36 @@ function drawPizza() {
          let toppingImage = document.createElement("img");
          toppingImage.src = checkedToppings[i].name + ".png";
          toppingImage.className = checkedToppings[i].value;
-         pizzaPreviewBox.appendChild(toppingImage);                                  
+         pizzaPreviewBox.appendChild(toppingImage);
       }
-   }      
+   }
 }
 
 
 
 // Function to build the pizza
 function buildPizza() {
-   let checkedToppings = document.querySelectorAll("input.topping:checked"); 
-
-
-}    
+   let checkedToppings = document.querySelectorAll("input.topping:checked");
+   let myPizza = new pizza();
+   myPizza.size = pizzaSizeBox.value;
+   myPizza.crust = pizzaCrustBox.value;
+   for (let i = 0; i < checkedToppings.length; i++) {
+      let myTopping = new topping();
+      myTopping.name = checkedToppings[i].name;
+      myTopping.side = checkedToppings[i].value;
+      myPizza.addToCart(myTopping);
+   }
+   return myPizza;
+}
 
 // Function to add the built pizza to the shopping cart
 function updateCart() {
-
-
+   let myPizza = buildPizza();
+   cart.addItem(myPizza);
+   //console.log(myPizza);
+   let paragraph = document.createElement("p")
+   paragraph.value = summarize(myPizza);
+   cartBox.appendChild(paragraph);
+   clearPizzaImage();
+   clearToppings();
 }  
