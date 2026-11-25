@@ -3,7 +3,7 @@
       Chapter 8
       Project 08-03
 
-      Project to build a pizza using object oriented programming
+      Project to build a Pizza using object oriented programming
       Author: Yehoshua Anton
       Date:   11/24/2026
 
@@ -15,46 +15,47 @@
 const cart = {
    items: new Array(),
    addItem: function (foodItem) {
-      //console.log(this.items)
       this.items.push(foodItem);
    }
 }
 
-function pizza() {
+function Pizza() {
    this.size;
    this.crust;
    this.toppings = new Array();
 
-   pizza.prototype.addToCart = function (cart) {
-      console.log(cart, cart.items, this)
+   Pizza.prototype.addToCart = function (cart) {
       cart.items.push(this);
    }
 
-   pizza.prototype.summarize = function () {
-      let summary = `Pizza ${this.size} ${this.crust}`;
+   Pizza.prototype.summarize = function () {
+      let summary = `Pizza: ${this.size} ${this.crust}`;
       for (let i = 0; i < this.toppings.length; i++) {
-         summary += ` ${this.toppings[i].name} (${this.toppings[i].side})`;
+         // The book doesn't mention this part, but need to make sure the toppings' side isn't none, or it'll add the entire array every time
+         if (this.toppings[i].side !== "none") {
+            summary += ` ${this.toppings[i].name} (${this.toppings[i].side})`;
+         }
       }
       return summary;
    }
 }
 
-function topping() {
+function Topping() {
    this.name;
    this.side;
 }
 
 /*----------------------------- Interface Code -------------------------*/
 
-let pizzaPreviewBox = document.getElementById("previewBox");         // pizza image 
-let pizzaSizeBox = document.getElementById("pizzaSize");             // pizza size selection
-let pizzaCrustBox = document.getElementById("pizzaCrust");           // pizza crust selection 
-let toppingOptions = document.querySelectorAll("input.topping");     // pizza topping option buttons
+let pizzaPreviewBox = document.getElementById("previewBox");         // Pizza image 
+let pizzaSizeBox = document.getElementById("pizzaSize");             // Pizza size selection
+let pizzaCrustBox = document.getElementById("pizzaCrust");           // Pizza crust selection 
+let toppingOptions = document.querySelectorAll("input.topping");     // Pizza Topping option buttons
 let addToCart = document.getElementById("addToCart");                // Add to Cart button
 let cartBox = document.getElementById("cart");                       // Shopping cart box
 
 
-// Add event handlers for the pizza toppings   
+// Add event handlers for the Pizza toppings   
 for (let i = 0; i < toppingOptions.length; i++) {
    toppingOptions[i].onclick = drawPizza;
 }
@@ -63,7 +64,7 @@ for (let i = 0; i < toppingOptions.length; i++) {
 addToCart.onclick = updateCart;
 
 
-// Clear the pizza image
+// Clear the Pizza image
 function clearPizzaImage() {
    while (pizzaPreviewBox.firstChild) {
       pizzaPreviewBox.removeChild(pizzaPreviewBox.firstChild);
@@ -78,9 +79,9 @@ function clearToppings() {
    }
 }
 
-/* Function to draw the pizza image  */
+/* Function to draw the Pizza image  */
 function drawPizza() {
-   // Erase current pizza image
+   // Erase current Pizza image
    clearPizzaImage();
    // Determine which toppings have been checked
    let checkedToppings = document.querySelectorAll("input.topping:checked");
@@ -98,29 +99,30 @@ function drawPizza() {
 
 
 
-// Function to build the pizza
+// Function to build the Pizza
 function buildPizza() {
    let checkedToppings = document.querySelectorAll("input.topping:checked");
-   let myPizza = new pizza();
+   let myPizza = new Pizza();
    myPizza.size = pizzaSizeBox.value;
    myPizza.crust = pizzaCrustBox.value;
    for (let i = 0; i < checkedToppings.length; i++) {
-      let myTopping = new topping();
+      let myTopping = new Topping();
       myTopping.name = checkedToppings[i].name;
       myTopping.side = checkedToppings[i].value;
-      myPizza.addToCart(myTopping);
+      // According to the book, this should be addTopping(myTopping)
+      myPizza.toppings.push(myTopping);
    }
    return myPizza;
 }
 
-// Function to add the built pizza to the shopping cart
+// Function to add the built Pizza to the shopping cart
 function updateCart() {
    let myPizza = buildPizza();
    cart.addItem(myPizza);
-   //console.log(myPizza);
-   let paragraph = document.createElement("p")
-   paragraph.value = summarize(myPizza);
+   const paragraph = document.createElement("p");
+   // Book says value when it means textContent
+   paragraph.textContent = myPizza.summarize(myPizza);
    cartBox.appendChild(paragraph);
    clearPizzaImage();
    clearToppings();
-}  
+}
